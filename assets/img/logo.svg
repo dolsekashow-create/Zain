@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 72" role="img" aria-label="Zain Consulting — Your Bridge to Major Markets">
+  <g transform="translate(4 8)">
+    <path d="M9 6H35V11.5L18.5 32.5H35V38H9V32.5L25.5 11.5H9Z" fill="#C99B3F"/>
+    <path d="M5 45C10.6 40.4 33.4 40.4 39 45" fill="none" stroke="#C99B3F" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
+  </g>
+  <text x="58" y="34" font-family="Poppins, 'Segoe UI', sans-serif" font-size="19" font-weight="700" letter-spacing="0.9" fill="#0C2340">ZAIN CONSULTING</text>
+  <text x="59" y="50" font-family="Poppins, 'Segoe UI', sans-serif" font-size="8.4" font-weight="500" letter-spacing="2.5" fill="#B4882B">YOUR BRIDGE TO MAJOR MARKETS</text>
+</svg>

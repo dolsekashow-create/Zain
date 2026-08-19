@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Zain Consulting — Arabic / RTL layer
+   Loaded on every page; rules only bite when <html dir="rtl"> is set.
+   ========================================================================== */
+
+[dir="rtl"] body,
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3,
+[dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6,
+[dir="rtl"] .btn,
+[dir="rtl"] .nav__link,
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .brand__name,
+[dir="rtl"] .footer-title,
+[dir="rtl"] .filter-pill,
+[dir="rtl"] .field label,
+[dir="rtl"] .acc-btn,
+[dir="rtl"] .stat__num,
+[dir="rtl"] .metric__val,
+[dir="rtl"] .member__role,
+[dir="rtl"] .mega__head,
+[dir="rtl"] .link-arrow {
+  font-family: var(--font-ar);
+}
+
+/* Arabic script does not take kerning tricks well */
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] .hero h1 { letter-spacing: 0; }
+[dir="rtl"] .eyebrow { letter-spacing: .08em; }
+[dir="rtl"] .brand__name { letter-spacing: 0; }
+[dir="rtl"] .brand__tag { letter-spacing: .02em; font-size: .55rem; }
+[dir="rtl"] .footer-title { letter-spacing: .06em; }
+[dir="rtl"] .tag,
+[dir="rtl"] .metric__label,
+[dir="rtl"] .csr h4,
+[dir="rtl"] .spot-list h4 { letter-spacing: .02em; }
+[dir="rtl"] body { line-height: 1.9; }
+
+/* Mirrored decorative gradients / positions */
+[dir="rtl"] .hero__bg img { object-position: 38% center; }
+[dir="rtl"] .page-hero::before {
+  background:
+    radial-gradient(900px 420px at 12% 6%, rgba(201,155,63,.24), transparent 62%),
+    linear-gradient(240deg, var(--navy-900) 0%, var(--navy-800) 52%, var(--navy-700) 100%);
+}
+[dir="rtl"] .cta-band::before {
+  background: linear-gradient(245deg, var(--navy-900), var(--navy-700) 70%, var(--navy-600));
+}
+[dir="rtl"] .site-footer::before {
+  background: radial-gradient(700px 340px at 92% 0%, rgba(201,155,63,.14), transparent 60%);
+}
+[dir="rtl"] .spotlight__bg::after {
+  background: linear-gradient(260deg, rgba(7,26,49,.97) 0%, rgba(7,26,49,.88) 38%, rgba(12,35,64,.72) 70%, rgba(12,35,64,.66) 100%);
+}
+[dir="rtl"] .newsletter::before,
+[dir="rtl"] .info-card::before {
+  background: radial-gradient(600px 260px at 0% 0%, rgba(201,155,63,.22), transparent 60%);
+}
+[dir="rtl"] .vm-card::after { transform-origin: right; }
+[dir="rtl"] .member__photo::after { background: linear-gradient(270deg, var(--gold-500), transparent); }
+[dir="rtl"] .rule { background: linear-gradient(270deg, var(--gold-500), var(--gold-200)); }
+[dir="rtl"] .footer-links a:hover { transform: none; }
+
+/* Numbers keep their Latin flow inside Arabic text */
+[dir="rtl"] .stat__num,
+[dir="rtl"] .metric__val,
+[dir="rtl"] .story__stat strong,
+[dir="rtl"] .error-page__code,
+[dir="rtl"] .svc-block__num,
+[dir="rtl"] .step__num { direction: ltr; unicode-bidi: isolate; }
+
+/* Phone numbers and e-mail addresses must not be re-ordered */
+[dir="rtl"] .ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; text-align: start; }
+
+/* The drawer itself is positioned with logical insets in style.css, so it
+   already slides from the correct edge — only the indent needs flipping. */
+@media (max-width: 1080px) {
+  [dir="rtl"] .mega__links a { padding-inline-start: 10px; padding-inline-end: 56px; }
+}

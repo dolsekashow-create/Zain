@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title.contact">Contact Us — Zain Consulting</title>
+<meta name="description" content="Talk to Zain Consulting about supplier registration, tender qualification, business development, training or supply chain support. Book a free consultation.">
+<meta name="theme-color" content="#0C2340">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/rtl.css">
+<script>(function(){try{if(localStorage.getItem('zc-lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';}}catch(e){}})();</script>
+<script src="assets/js/i18n.dict.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</head>
+
+<body data-page="contact">
+<script src="assets/js/components.js"></script>
+
+<div data-component="header"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <ul class="breadcrumb">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><svg class="icon sep" aria-hidden="true"><use href="#i-chevron-right"></use></svg><span data-i18n="nav.contact">Contact Us</span></li>
+      </ul>
+      <h1 data-i18n="contact.hero.title">Let's Talk About Your Next Tender</h1>
+      <p class="page-hero__lead" data-i18n="contact.hero.lead">Tell us which buyers you are trying to reach and where you are stuck. The first consultation is free and lasts about thirty minutes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ============================ FORM ========================= -->
+        <div class="form-card" id="consultation" data-reveal>
+          <span class="eyebrow" data-i18n="contact.form.eyebrow">Send a Message</span>
+          <h2 data-i18n="contact.form.title">Request a Free Consultation</h2>
+          <p data-i18n="contact.form.sub">We reply to every enquiry within one business day.</p>
+
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+            <svg class="icon" aria-hidden="true"><use href="#i-check-circle"></use></svg>
+            <span data-i18n="contact.form.success">Thank you — your request has been recorded. A consultant will contact you within one business day.</span>
+          </div>
+
+          <!-- No back end is connected. See README.md → "Connecting the contact form"
+               for wiring this to Formspree, Web3Forms, EmailJS or your own endpoint. -->
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-name"><span data-i18n="contact.f.name">Full name</span> <span class="req">*</span></label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Ahmed Rabie" data-i18n-placeholder="contact.f.namePh">
+                <span class="field__error" data-i18n="contact.err.name">Please enter your name.</span>
+              </div>
+              <div class="field">
+                <label for="cf-company" data-i18n="contact.f.company">Company</label>
+                <input id="cf-company" name="company" type="text" autocomplete="organization" placeholder="Company name" data-i18n-placeholder="contact.f.companyPh">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-email"><span data-i18n="contact.f.email">Work email</span> <span class="req">*</span></label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" data-i18n-placeholder="contact.f.emailPh">
+                <span class="field__error" data-i18n="contact.err.email">Please enter a valid email address.</span>
+              </div>
+              <div class="field">
+                <label for="cf-phone" data-i18n="contact.f.phone">Phone</label>
+                <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="+971 50 123 4567" data-i18n-placeholder="contact.f.phonePh">
+                <span class="field__error" data-i18n="contact.err.phone">Please enter a valid phone number.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="cf-service"><span data-i18n="contact.f.service">Service of interest</span> <span class="req">*</span></label>
+                <select id="cf-service" name="service" required>
+                  <option value="" data-i18n="contact.f.selectPh">Select a service…</option>
+                  <option value="tender" data-i18n="svc.tender.title">Tender Qualification &amp; Registration</option>
+                  <option value="bizdev" data-i18n="svc.bizdev.title">Business Development</option>
+                  <option value="training" data-i18n="svc.training.title">Training &amp; Coaching</option>
+                  <option value="supply" data-i18n="svc.supply.title">Supply Chain Support</option>
+                  <option value="other" data-i18n="contact.f.notSure">Not sure yet</option>
+                </select>
+                <span class="field__error" data-i18n="contact.err.service">Please choose a service.</span>
+              </div>
+              <div class="field">
+                <label for="cf-market" data-i18n="contact.f.market">Target market</label>
+                <input id="cf-market" name="market" type="text" placeholder="UAE, Saudi Arabia, Qatar…" data-i18n-placeholder="contact.f.marketPh">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="cf-message"><span data-i18n="contact.f.message">How can we help?</span> <span class="req">*</span></label>
+              <textarea id="cf-message" name="message" required placeholder="Which buyers are you targeting, and where are you stuck?" data-i18n-placeholder="contact.f.messagePh"></textarea>
+              <span class="field__error" data-i18n="contact.err.message">Please tell us briefly what you need.</span>
+            </div>
+
+            <div class="checkbox-row">
+              <input id="cf-consent" name="consent" type="checkbox" required>
+              <label for="cf-consent" style="margin:0">
+                <span data-i18n="contact.f.consent">I agree that Zain Consulting may contact me about this enquiry, in line with the</span>
+                <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>.
+                <span class="req">*</span>
+              </label>
+            </div>
+
+            <button class="btn btn-gold btn-block btn-lg" type="submit">
+              <span data-i18n="contact.f.submit">Send Request</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+            </button>
+            <p class="field__hint mt-24" data-i18n="contact.f.note">Prefer email? Write to info@zainconsulting.com and we will take it from there.</p>
+          </form>
+        </div>
+
+        <!-- ============================ ASIDE ======================== -->
+        <aside class="contact-aside">
+          <div class="info-card" data-reveal data-reveal-delay="100">
+            <h3 data-i18n="contact.info.title">Direct Contact</h3>
+            <p data-i18n="contact.info.sub">For urgent tender deadlines, call us — email replies can take a few hours.</p>
+            <ul class="info-list">
+              <li>
+                <span class="info-ico"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.info.email">Email</strong>
+                  <a href="mailto:info@zainconsulting.com">info@zainconsulting.com</a>
+                </div>
+              </li>
+              <li>
+                <span class="info-ico"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.info.phone">Phone</strong>
+                  <a class="ltr" href="tel:+971501234567">+971 50 123 4567</a>
+                </div>
+              </li>
+              <li>
+                <span class="info-ico"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.info.whatsapp">WhatsApp</strong>
+                  <a class="ltr" href="https://wa.me/971501234567" target="_blank" rel="noopener">+971 50 123 4567</a>
+                </div>
+              </li>
+              <li>
+                <span class="info-ico"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+                <div>
+                  <strong data-i18n="contact.info.office">Office</strong>
+                  <span data-i18n="footer.address">Suite 2001, Business Bay, Dubai, United Arab Emirates</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hours-card" data-reveal data-reveal-delay="180">
+            <h3 style="font-size:1.05rem;margin-bottom:0" data-i18n="contact.hours.title">Working Hours</h3>
+            <ul class="hours-list">
+              <li><strong data-i18n="contact.hours.d1">Sunday – Thursday</strong><span class="ltr">09:00 – 18:00 GST</span></li>
+              <li><strong data-i18n="contact.hours.d2">Friday</strong><span data-i18n="contact.hours.byAppt">By appointment</span></li>
+              <li><strong data-i18n="contact.hours.d3">Saturday</strong><span data-i18n="contact.hours.closed">Closed</span></li>
+            </ul>
+          </div>
+
+          <div class="hours-card" data-reveal data-reveal-delay="240">
+            <h3 style="font-size:1.05rem" data-i18n="contact.follow.title">Follow Us</h3>
+            <p style="font-size:.88rem" data-i18n="contact.follow.text">Tender guidance and market notes, published regularly.</p>
+            <div class="socials" style="margin-top:14px">
+              <a href="https://www.linkedin.com/company/zain-consulting" target="_blank" rel="noopener" aria-label="LinkedIn" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
+              <a href="https://www.facebook.com/zainconsulting" target="_blank" rel="noopener" aria-label="Facebook" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a>
+              <a href="https://www.instagram.com/zainconsulting" target="_blank" rel="noopener" aria-label="Instagram" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+              <a href="https://x.com/zainconsulting" target="_blank" rel="noopener" aria-label="X" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)"><svg class="icon" aria-hidden="true"><use href="#i-x-social"></use></svg></a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== MAP ============================= -->
+  <section class="section section--alt section--tight">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="contact.map.eyebrow">Find Us</span>
+        <h2 data-i18n="contact.map.title">Business Bay, Dubai</h2>
+        <p data-i18n="contact.map.sub">Meetings by appointment. We also travel to client sites across the GCC.</p>
+      </div>
+      <!-- Replace the bbox and marker coordinates with the real office location. -->
+      <div class="map-wrap" data-reveal>
+        <iframe
+          title="Zain Consulting office location on a map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=55.2555%2C25.1740%2C55.2855%2C25.1960&amp;layer=mapnik&amp;marker=25.1850%2C55.2705"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FAQ ============================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="contact.faq.eyebrow">FAQ</span>
+        <h2 data-i18n="contact.faq.title">Questions We Are Asked Most</h2>
+      </div>
+
+      <div class="accordion" data-reveal>
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <span data-i18n="contact.faq.q1">How long does supplier registration usually take?</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="contact.faq.a1">It depends on the buyer. Straightforward private sector registrations can complete in three to six weeks; registration with a national oil company or government portal more often takes two to four months, largely because of certificate and audit requirements. We give you a realistic timeline after the first review of your documents.</p>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <span data-i18n="contact.faq.q2">Do you work with companies based outside the UAE?</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="contact.faq.a2">Yes. Most of our clients are registering into markets where they have no local presence yet. We work across the GCC and the wider Middle East, and much of the process runs remotely — with site visits when the engagement calls for it.</p>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <span data-i18n="contact.faq.q3">Can you help with a tender that closes in two weeks?</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="contact.faq.a3">Sometimes — it depends on whether you are already registered and what the technical annexes demand. If the timeline is not realistic we will say so rather than take the work, and we will focus instead on getting you ready for the next cycle.</p>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <span data-i18n="contact.faq.q4">How do you charge?</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="contact.faq.a4">Our standard model is a fixed fee agreed per scope — registration, tender preparation, training programme or sourcing assignment. Longer engagements can be structured as a monthly retainer. You receive the fee in writing before any work starts.</p>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-btn" type="button">
+            <span data-i18n="contact.faq.q5">What do you need from us to get started?</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+          </button>
+          <div class="acc-panel"><div>
+            <p data-i18n="contact.faq.a5">For the first call, nothing at all. To begin work we normally need your trade licence, latest financial statements, any quality or HSE certificates, a company profile and two or three reference projects. If some of those are missing, closing that gap becomes the first part of the plan.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+</body>
+</html>
