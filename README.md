@@ -198,6 +198,19 @@ The newsletter form in `blog.html` (`newsletterForm()`) works the same way.
 
 ---
 
+## Deploying to Vercel
+
+This is a static site with no `package.json`, so Vercel must **not** be left on a framework
+preset. `vercel.json` in the repository root already sets `"framework": null` with no build
+command, which is what makes the deploy work.
+
+When importing the repository, set **Application Preset → Other** before pressing Deploy. On an
+existing project that failed with *"No Next.js version detected"*, go to
+**Settings → Build and Deployment → Framework Preset → Other**, leave Build Command and Install
+Command empty, keep Output Directory empty (or `.`), then **Redeploy**.
+
+`404.html` is served automatically for unknown paths.
+
 ## Deploying to GitHub Pages
 
 ```bash
