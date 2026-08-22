@@ -41,7 +41,7 @@
         <!-- ============================ FORM ========================= -->
         <div class="form-card" id="consultation" data-reveal>
           <span class="eyebrow" data-i18n="contact.form.eyebrow">Send a Message</span>
-          <h2 data-i18n="contact.form.title">Request a Free Consultation</h2>
+          <h2 data-i18n="contact.form.title">Request a Consultation</h2>
           <p data-i18n="contact.form.sub">We reply to every enquiry within one business day.</p>
 
           <div class="form-success" id="formSuccess" role="status" aria-live="polite">
@@ -72,7 +72,7 @@
               </div>
               <div class="field">
                 <label for="cf-phone" data-i18n="contact.f.phone">Phone</label>
-                <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="+971 50 123 4567" data-i18n-placeholder="contact.f.phonePh">
+                <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="+20 10 3590 4464" data-i18n-placeholder="contact.f.phonePh">
                 <span class="field__error" data-i18n="contact.err.phone">Please enter a valid phone number.</span>
               </div>
             </div>
@@ -82,11 +82,14 @@
                 <label for="cf-service"><span data-i18n="contact.f.service">Service of interest</span> <span class="req">*</span></label>
                 <select id="cf-service" name="service" required>
                   <option value="" data-i18n="contact.f.selectPh">Select a service…</option>
-                  <option value="tender" data-i18n="svc.tender.title">Tender Qualification &amp; Registration</option>
-                  <option value="bizdev" data-i18n="svc.bizdev.title">Business Development</option>
-                  <option value="training" data-i18n="svc.training.title">Training &amp; Coaching</option>
-                  <option value="supply" data-i18n="svc.supply.title">Supply Chain Support</option>
-                  <option value="other" data-i18n="contact.f.notSure">Not sure yet</option>
+                  <option value="supplier-registration" data-i18n="contact.svc.registration">Supplier Registration</option>
+                  <option value="tender-participation" data-i18n="contact.svc.participation">Tender Participation</option>
+                  <option value="tender-pricing" data-i18n="contact.svc.pricing">Tender Pricing</option>
+                  <option value="market-entry" data-i18n="contact.svc.market">Market Entry</option>
+                  <option value="partner-identification" data-i18n="contact.svc.partner">Partner Identification</option>
+                  <option value="training" data-i18n="contact.svc.training">Training</option>
+                  <option value="sourcing" data-i18n="contact.svc.sourcing">Equipment / Chemical Sourcing</option>
+                  <option value="other" data-i18n="contact.svc.other">Other</option>
                 </select>
                 <span class="field__error" data-i18n="contact.err.service">Please choose a service.</span>
               </div>
@@ -132,36 +135,53 @@
                   <a href="mailto:info@zainconsulting.com">info@zainconsulting.com</a>
                 </div>
               </li>
-              <li>
-                <span class="info-ico"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
-                <div>
-                  <strong data-i18n="contact.info.phone">Phone</strong>
-                  <a class="ltr" href="tel:+971501234567">+971 50 123 4567</a>
-                </div>
-              </li>
-              <li>
-                <span class="info-ico"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
-                <div>
-                  <strong data-i18n="contact.info.whatsapp">WhatsApp</strong>
-                  <a class="ltr" href="https://wa.me/971501234567" target="_blank" rel="noopener">+971 50 123 4567</a>
-                </div>
-              </li>
-              <li>
-                <span class="info-ico"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg></span>
-                <div>
-                  <strong data-i18n="contact.info.office">Office</strong>
-                  <span data-i18n="footer.address">Suite 2001, Business Bay, Dubai, United Arab Emirates</span>
-                </div>
-              </li>
             </ul>
+
+            <div class="branch-grid mt-24">
+              <div class="branch">
+                <span class="branch__name">
+                  <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+                  <span data-i18n="contact.branch.egypt">Egypt</span>
+                </span>
+                <dl>
+                  <div>
+                    <dt data-i18n="contact.info.phone">Phone</dt>
+                    <dd><a class="ltr" href="tel:+20482347812">+2 048 234 7812</a></dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="contact.info.messaging">WhatsApp / WeChat / BOTIM</dt>
+                    <dd><a class="ltr" href="https://wa.me/201035904464" target="_blank" rel="noopener">+20 10 3590 4464</a></dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="branch">
+                <span class="branch__name">
+                  <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+                  <span data-i18n="contact.branch.uae">United Arab Emirates</span>
+                </span>
+                <dl>
+                  <div>
+                    <dt data-i18n="contact.info.phone">Phone</dt>
+                    <dd><a class="ltr" href="tel:+971559634349">+971 55 9634349</a></dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="contact.info.messaging">WhatsApp / WeChat / BOTIM</dt>
+                    <dd><a class="ltr" href="https://wa.me/971559634349" target="_blank" rel="noopener">+971 55 9634349</a></dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <p class="mt-24" style="font-size:.86rem;color:rgba(255,255,255,.62)" data-i18n="contact.info.appointment">Meetings by appointment. We also travel to client sites across the region.</p>
           </div>
 
           <div class="hours-card" data-reveal data-reveal-delay="180">
             <h3 style="font-size:1.05rem;margin-bottom:0" data-i18n="contact.hours.title">Working Hours</h3>
             <ul class="hours-list">
               <li><strong data-i18n="contact.hours.d1">Sunday – Thursday</strong><span class="ltr">09:00 – 18:00 GST</span></li>
-              <li><strong data-i18n="contact.hours.d2">Friday</strong><span data-i18n="contact.hours.byAppt">By appointment</span></li>
-              <li><strong data-i18n="contact.hours.d3">Saturday</strong><span data-i18n="contact.hours.closed">Closed</span></li>
+              <li><strong data-i18n="contact.hours.d3">Saturday</strong><span data-i18n="contact.hours.byAppt">By appointment</span></li>
+              <li><strong data-i18n="contact.hours.d2">Friday</strong><span data-i18n="contact.hours.closed">Closed</span></li>
             </ul>
           </div>
 
@@ -177,25 +197,6 @@
           </div>
         </aside>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================== MAP ============================= -->
-  <section class="section section--alt section--tight">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow" data-i18n="contact.map.eyebrow">Find Us</span>
-        <h2 data-i18n="contact.map.title">Business Bay, Dubai</h2>
-        <p data-i18n="contact.map.sub">Meetings by appointment. We also travel to client sites across the GCC.</p>
-      </div>
-      <!-- Replace the bbox and marker coordinates with the real office location. -->
-      <div class="map-wrap" data-reveal>
-        <iframe
-          title="Zain Consulting office location on a map"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=55.2555%2C25.1740%2C55.2855%2C25.1960&amp;layer=mapnik&amp;marker=25.1850%2C55.2705"></iframe>
       </div>
     </div>
   </section>

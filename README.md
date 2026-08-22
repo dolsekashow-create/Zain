@@ -13,14 +13,15 @@ Drop it on any web host or GitHub Pages and it runs.
 
 | File | Page | Notes |
 |---|---|---|
-| `index.html` | Home | 8 sections: hero, trust bar, services, philosophy, why us, case study, insights, CTA |
-| `about.html` | About Us | Story, Vision, Mission, Core Values (anchors: `#story`, `#vision`, `#mission`, `#values`) |
-| `team.html` | Our Team | 9 team members |
-| `services.html` | Services | 4 practice areas in depth + the delivery process (anchors below) |
-| `projects.html` | Case Studies | One detailed case study + three summary cards |
-| `blog.html` | Blog | Featured post, category filter, 6 posts, newsletter block |
-| `blog-post.html` | Article | Full article template, written in both languages |
-| `contact.html` | Contact Us | Form with validation, contact details, map, FAQ accordion |
+| `index.html` | Home | Hero, trust strip, Your Journey to the Market, What We Do, philosophy, why us, success story, insights, CTA |
+| `about.html` | About Us | Story, Vision, Mission, Values (anchors: `#story`, `#vision`, `#mission`, `#values`) |
+| `why-zain.html` | Why Zain Consulting | The four value propositions + the brand value-proposition set |
+| `team.html` | Team | Network-of-specialists banner + 9 team members |
+| `services.html` | Services | 4 practice areas in depth + the 5-step How We Work visual (anchors below) |
+| `success-stories.html` | Success Stories | One detailed story + three summary cards |
+| `insights.html` | Insights | Featured post, category filter, 6 posts, newsletter block |
+| `insights-post.html` | Article | Full article template, written in both languages |
+| `contact.html` | Contact Us | Form with validation, Egypt + UAE branches, hours, FAQ accordion |
 | `privacy.html` / `terms.html` | Legal | Bilingual policy templates |
 | `404.html` | Not found | Used automatically by GitHub Pages |
 
@@ -46,8 +47,8 @@ including the icon sprite and the language switch.
 
 ```
 .
-├── index.html · about.html · team.html · services.html · projects.html
-├── blog.html · blog-post.html · contact.html · privacy.html · terms.html · 404.html
+├── index.html · about.html · team.html · services.html · success-stories.html
+├── insights.html · insights-post.html · contact.html · privacy.html · terms.html · 404.html
 ├── assets/
 │   ├── css/
 │   │   ├── style.css      Design tokens, layout, header, footer, buttons, cards
@@ -86,7 +87,7 @@ footer on `DOMContentLoaded` and then fires a `zc:ready` event; `i18n.js` and `m
 that event rather than for `DOMContentLoaded`, because deferred scripts run *before* it.
 
 `data-page` on `<body>` tells the header which nav item to mark as current
-(`home`, `about`, `services`, `projects`, `blog`, `contact`).
+(`home`, `about`, `team`, `projects`, `services`, `blog`, `contact`).
 
 ---
 
@@ -128,8 +129,8 @@ Everything is in `assets/js/components.js`:
 
 ### Adding a blog post
 
-1. Copy `blog-post.html` to e.g. `blog-pricing-strategy.html` and replace the two `.prose` blocks.
-2. Add a card to the grid in `blog.html`, copying an existing `<article class="card post-item">`.
+1. Copy `insights-post.html` to e.g. `blog-pricing-strategy.html` and replace the two `.prose` blocks.
+2. Add a card to the grid in `insights.html`, copying an existing `<article class="card post-item">`.
 3. Set `data-category` on the card to one of `tender`, `bizdev`, `chem`, `energy`, `success` so the
    category filter picks it up.
 
@@ -146,6 +147,25 @@ All tokens are at the top of `assets/css/style.css`:
 ```
 
 Changing a token restyles the whole site.
+
+---
+
+## Brand assets
+
+| File | Used for |
+|---|---|
+| `assets/img/logo-zain.png` | Full stacked lockup — mark, "ZAIN CONSULTING", slogan. For decks, letterheads, social. |
+| `assets/img/logo-mark.png` | Mark only (hand, growth bars, Eye of Horus). Used in the site header and footer. |
+| `assets/img/favicon.svg` | Eye of Horus on navy — browser tab icon, vector. |
+| `assets/img/logo.svg` | Earlier wordmark, kept only as a fallback reference. |
+
+The symbol on the cuff is the **Eye of Horus**, replacing the Ankh that appeared in the original
+logo file. It was substituted in the raster itself, so `logo-zain.png` and `logo-mark.png` are the
+corrected artwork — if the design studio issues a new master file, replace those two PNGs and
+nothing else needs to change.
+
+The header lockup is assembled in `components.js` (`brand()`): the mark image plus the company
+name and slogan as live text, so the slogan stays translatable and stays crisp at any size.
 
 ---
 
@@ -170,27 +190,22 @@ fetch('/api/contact', { method: 'POST', body: new FormData(form) })
   .then(function () { success.classList.add('is-visible'); form.reset(); });
 ```
 
-The newsletter form in `blog.html` (`newsletterForm()`) works the same way.
+The newsletter form in `insights.html` (`newsletterForm()`) works the same way.
 
 ---
 
 ## Before you go live
 
-- [ ] Replace the contact details — `info@zainconsulting.com`, `+971 50 123 4567` and the Business
-      Bay address appear in `components.js` (footer) and `contact.html`.
+- [ ] Confirm the contact details. `info@zainconsulting.com`, the Egypt numbers
+      (`+2 048 234 7812`, `+20 10 3590 4464`) and the UAE number (`+971 55 9634349`) appear in
+      `components.js` (footer), `contact.html`, `privacy.html` and `terms.html`.
 - [ ] Point the social links in `components.js` (`SOCIALS`) at the real profiles, and the LinkedIn
       buttons in `team.html` at each person's own profile.
 - [ ] Add real team photos: replace `<span class="member__initials">XX</span>` with
       `<img src="assets/img/team/name.jpg" alt="Full name">`. The bios are placeholders written from
       each job title — have the team confirm them.
-- [ ] The trust strip on the home page shows the sectors served (Oil & Gas, Petrochemicals, Energy &
-      Utilities, Government Tenders). If you want client or partner logos there instead, swap them in
-      at the marked comment in `index.html` — but only for organisations that have authorised you to
-      display their mark.
-- [ ] Replace the case studies in `projects.html` with real engagements, and publish client names
-      only with written permission. The "50+ companies / 90% win rate / ISO" figures on the home
-      page should be ones you can evidence.
-- [ ] Update the map coordinates in `contact.html` to the real office.
+- [ ] Replace the stories in `success-stories.html` with real engagements, and publish client names
+      only with written permission.
 - [ ] Have `privacy.html` and `terms.html` reviewed by legal counsel — they are drafted templates,
       not legal advice.
 - [ ] Put the real domain into `sitemap.xml` and `robots.txt`.

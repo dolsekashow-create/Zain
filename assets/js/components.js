@@ -57,6 +57,8 @@
     'message': '<path d="M21 11.8a8.2 8.2 0 0 1-11.8 7.4L3.5 21l1.8-5.5A8.2 8.2 0 1 1 21 11.8z"/>',
     'user': '<circle cx="12" cy="8" r="4"/><path d="M4.5 21v-1.2a6 6 0 0 1 6-6h3a6 6 0 0 1 6 6V21"/>',
     'compass': '<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5.5-5.5 2 2-5.5z"/>',
+    'door': '<path d="M4 21h16"/><path d="M6.5 21V4.6a1.6 1.6 0 0 1 1.9-1.57l7 1.3A1.6 1.6 0 0 1 16.7 5.9V21"/><circle cx="13.6" cy="12.4" r="1.05" fill="currentColor" stroke="none"/>',
+    'eye-horus': '<path d="M2.6 9.4C7 4.6 15.4 3.4 22 6" stroke-width="2.1"/><path d="M2 13.2C5.6 8.8 13.4 8 21.8 10.4c-5 5-14 6.4-19.8 2.8Z" fill="currentColor" stroke="none"/><circle cx="12.6" cy="11.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.4 15.6 5.8 21" stroke-width="2"/><path d="M13.9 15.8c-.4 3.6 1.9 5.6 4.4 5.1 2.2-.5 2.8-3 1.3-4.2" stroke-width="2"/>',
     'linkedin': '<path d="M5 3.4a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9.6h4V21H3zM10 9.6h3.8v1.6h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.1c0-1.22-.02-2.8-1.9-2.8-1.9 0-2.2 1.34-2.2 2.72V21h-4z" fill="currentColor" stroke="none"/>',
     'facebook': '<path d="M14 9.4V7.9c0-.75.2-1.15 1.4-1.15h1.5V3.2h-2.4C11.2 3.2 10 4.7 10 7.2v2.2H8v3.4h2V21h4v-8.2h2.7l.35-3.4z" fill="currentColor" stroke="none"/>',
     'instagram': '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"/>',
@@ -83,10 +85,7 @@
   function brand(light) {
     return '' +
       '<a class="brand' + (light ? ' brand--light' : '') + '" href="index.html" aria-label="Zain Consulting">' +
-        '<svg class="brand__mark" viewBox="0 0 44 46" aria-hidden="true">' +
-          '<path d="M9 6H35V11.5L18.5 32.5H35V38H9V32.5L25.5 11.5H9Z" fill="currentColor"/>' +
-          '<path d="M5 43c5-4.6 29-4.6 34 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity=".5"/>' +
-        '</svg>' +
+        '<img class="brand__mark" src="assets/img/logo-mark.png" alt="" width="160" height="176">' +
         '<span class="brand__text">' +
           '<span class="brand__name">Zain Consulting</span>' +
           '<span class="brand__tag" data-i18n="brand.tagline">Your Bridge to Major Markets</span>' +
@@ -123,9 +122,9 @@
       title: 'Training &amp; Coaching', i18n: 'svc.training.title',
       links: [
         ['services.html#training-coaching', 'Online Courses', 'svc.training.l1'],
-        ['services.html#training-coaching', 'In-Person Workshops', 'svc.training.l2'],
         ['services.html#training-coaching', 'Tender Procedures Training', 'svc.training.l3'],
-        ['services.html#training-coaching', 'Registration Training', 'svc.training.l4']
+        ['services.html#training-coaching', 'Registration Training', 'svc.training.l4'],
+        ['services.html#training-coaching', 'Bid Management Coaching', 'svc.training.l5']
       ]
     },
     {
@@ -142,10 +141,10 @@
 
   var ABOUT_LINKS = [
     ['about.html#story', 'Our Story', 'nav.about.story'],
-    ['about.html#vision', 'Our Vision', 'nav.about.vision'],
-    ['about.html#mission', 'Our Mission', 'nav.about.mission'],
-    ['about.html#values', 'Core Values', 'nav.about.values'],
-    ['team.html', 'Our Team', 'nav.about.team']
+    ['about.html#vision', 'Vision', 'nav.about.vision'],
+    ['about.html#mission', 'Mission', 'nav.about.mission'],
+    ['about.html#values', 'Values', 'nav.about.values'],
+    ['why-zain.html', 'Why Zain Consulting', 'nav.about.why']
   ];
 
   function linkList(items) {
@@ -172,7 +171,7 @@
         '<div class="mega__foot">' +
           '<span data-i18n="nav.mega.note">Not sure where to start? Book a free 30-minute discovery call.</span>' +
           '<a class="btn btn-gold btn-sm" href="contact.html#consultation">' +
-            '<span data-i18n="cta.bookShort">Book a Free Consultation</span>' + icon('arrow-right') +
+            '<span data-i18n="cta.bookShort">Book a Consultation</span>' + icon('arrow-right') +
           '</a>' +
         '</div>' +
       '</div>';
@@ -181,9 +180,10 @@
   var NAV_ITEMS = [
     { id: 'home', href: 'index.html', label: 'Home', i18n: 'nav.home' },
     { id: 'about', href: 'about.html', label: 'About Us', i18n: 'nav.about', mega: '<div class="mega mega--sm">' + linkList(ABOUT_LINKS) + '</div>' },
+    { id: 'team', href: 'team.html', label: 'Team', i18n: 'nav.team' },
+    { id: 'projects', href: 'success-stories.html', label: 'Success Stories', i18n: 'nav.projects' },
     { id: 'services', href: 'services.html', label: 'Services', i18n: 'nav.services', mega: servicesMega() },
-    { id: 'projects', href: 'projects.html', label: 'Case Studies', i18n: 'nav.projects' },
-    { id: 'blog', href: 'blog.html', label: 'Blog', i18n: 'nav.blog' },
+    { id: 'blog', href: 'insights.html', label: 'Insights', i18n: 'nav.blog' },
     { id: 'contact', href: 'contact.html', label: 'Contact Us', i18n: 'nav.contact' }
   ];
 
@@ -212,12 +212,12 @@
           brand(false) +
           '<nav class="nav" id="primaryNav" aria-label="Primary">' +
             '<ul class="nav__list">' + items + '</ul>' +
-            '<a class="btn btn-gold" href="contact.html#consultation">' + icon('calendar') +
-              '<span data-i18n="cta.bookShort">Book a Free Consultation</span></a>' +
+            '<a class="btn btn-gold btn-caps" href="contact.html#consultation">' + icon('calendar') +
+              '<span data-i18n="cta.bookNav">Book a Consultation</span></a>' +
           '</nav>' +
           '<div class="header-actions">' +
-            '<a class="btn btn-primary btn-sm" href="contact.html#consultation">' + icon('calendar') +
-              '<span data-i18n="cta.bookShort">Book a Free Consultation</span></a>' +
+            '<a class="btn btn-gold btn-sm btn-caps" href="contact.html#consultation">' + icon('calendar') +
+              '<span data-i18n="cta.bookNav">Book a Consultation</span></a>' +
             '<div class="lang-switch" role="group" aria-label="Language">' +
               '<button type="button" data-lang="en">EN</button>' +
               '<button type="button" data-lang="ar">AR</button>' +
@@ -237,9 +237,11 @@
   var QUICK_LINKS = [
     ['index.html', 'Home', 'nav.home'],
     ['about.html', 'About Us', 'nav.about'],
+    ['why-zain.html', 'Why Zain Consulting', 'nav.about.why'],
+    ['team.html', 'Team', 'nav.team'],
+    ['success-stories.html', 'Success Stories', 'nav.projects'],
     ['services.html', 'Services', 'nav.services'],
-    ['projects.html', 'Case Studies', 'nav.projects'],
-    ['blog.html', 'Blog', 'nav.blog'],
+    ['insights.html', 'Insights', 'nav.blog'],
     ['contact.html', 'Contact Us', 'nav.contact']
   ];
 
@@ -267,6 +269,14 @@
 
     return '' +
       '<footer class="site-footer">' +
+        /* The bridge belongs in the bottom bar — the spread motif carries the home page. */
+        '<svg class="footer-bridge" viewBox="0 0 1200 150" fill="none" aria-hidden="true" preserveAspectRatio="none">' +
+          '<path d="M0 128h1200" stroke="currentColor" stroke-width="2"/>' +
+          '<path d="M40 128C140 34 320 6 470 6s330 28 430 122" stroke="currentColor" stroke-width="2"/>' +
+          '<path d="M120 128V74M210 128V50M300 128V32M390 128V20M480 128V16M570 128V22M660 128V36M750 128V56M840 128V82M930 128V110" stroke="currentColor" stroke-width="1.3"/>' +
+          '<path d="M470 6v122M470 6l-330 122M470 6l330 122" stroke="currentColor" stroke-width="1.6" opacity=".7"/>' +
+          '<path d="M0 140h1200" stroke="currentColor" stroke-width="7" opacity=".45"/>' +
+        '</svg>' +
         '<div class="container">' +
           '<div class="footer-main">' +
             '<div class="footer-about">' +
@@ -286,8 +296,14 @@
               '<h4 class="footer-title" data-i18n="footer.contactUs">Contact Us</h4>' +
               '<ul class="footer-contact">' +
                 '<li>' + icon('mail') + '<a href="mailto:info@zainconsulting.com">info@zainconsulting.com</a></li>' +
-                '<li>' + icon('phone') + '<a class="ltr" href="tel:+971501234567">+971 50 123 4567</a></li>' +
-                '<li>' + icon('pin') + '<span data-i18n="footer.address">Suite 2001, Business Bay, Dubai, United Arab Emirates</span></li>' +
+                '<li>' + icon('pin') +
+                  '<span><strong data-i18n="contact.branch.egypt">Egypt</strong>' +
+                  '<a class="ltr" href="tel:+20482347812">+2 048 234 7812</a><br>' +
+                  '<a class="ltr" href="https://wa.me/201035904464" target="_blank" rel="noopener">+20 10 3590 4464</a></span></li>' +
+                '<li>' + icon('pin') +
+                  '<span><strong data-i18n="contact.branch.uae">United Arab Emirates</strong>' +
+                  '<a class="ltr" href="tel:+971559634349">+971 55 9634349</a></span></li>' +
+                '<li>' + icon('calendar') + '<span data-i18n="footer.appointment">Meetings by appointment. We also travel to client sites across the region.</span></li>' +
               '</ul>' +
             '</div>' +
           '</div>' +

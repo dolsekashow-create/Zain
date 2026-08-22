@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  var MOBILE = '(max-width: 1080px)';
+  var MOBILE = '(max-width: 1200px)';
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function $(sel, ctx) { return (ctx || document).querySelector(sel); }

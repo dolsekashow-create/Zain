@@ -72,6 +72,6 @@
 
 /* The drawer itself is positioned with logical insets in style.css, so it
    already slides from the correct edge — only the indent needs flipping. */
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   [dir="rtl"] .mega__links a { padding-inline-start: 10px; padding-inline-end: 56px; }
 }

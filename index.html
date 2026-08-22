@@ -34,16 +34,18 @@
     </div>
     <div class="container">
       <div class="hero__content">
-        <h1 data-i18n="hero.title">Your Bridge to Major Markets —<br>From Registration to Winning Tenders</h1>
-        <p class="hero__lead" data-i18n="hero.lead">Strategic consulting that empowers startups and mid-sized companies to qualify for, compete in, and win major government and private sector tenders across the Middle East.</p>
+        <span class="hero__kicker" data-i18n="hero.kicker">We open doors. We build capability. We deliver results.</span>
+        <h1 data-i18n="hero.title">Your Bridge to<br><span class="accent">Major Markets</span></h1>
+        <p class="hero__sub" data-i18n="hero.sub">From Registration to Winning Tenders &amp; Grow your business</p>
+        <p class="hero__lead" data-i18n="hero.lead">We open doors. We create opportunities. We build your success across borders.</p>
         <div class="btn-group">
-          <a class="btn btn-primary btn-lg" href="services.html">
+          <a class="btn btn-gold btn-lg btn-caps" href="services.html">
             <span data-i18n="hero.btnServices">Explore Our Services</span>
             <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
           </a>
-          <a class="btn btn-gold btn-lg" href="contact.html#consultation">
+          <a class="btn btn-ghost-light btn-lg btn-caps" href="contact.html#consultation">
             <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
-            <span data-i18n="cta.bookShort">Book a Free Consultation</span>
+            <span data-i18n="cta.bookNav">Book a Consultation</span>
           </a>
         </div>
       </div>
@@ -53,54 +55,90 @@
     </span>
   </section>
 
-  <!-- ==================== 2. TRUST & STATISTICS ===================== -->
-  <section class="trust">
-    <div class="container trust__inner">
-      <div class="stats-box" data-reveal>
-        <div class="stat">
-          <span class="stat__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg></span>
-          <span>
-            <span class="stat__num" data-count="50" data-suffix="+">50+</span>
-            <span class="stat__label" data-i18n="stats.companies">Companies Trusted Us</span>
-          </span>
-        </div>
-        <div class="stat">
-          <span class="stat__icon"><svg class="icon" aria-hidden="true"><use href="#i-trophy"></use></svg></span>
-          <span>
-            <span class="stat__num" data-count="90" data-suffix="%">90%</span>
-            <span class="stat__label" data-i18n="stats.winRate">Tender Win Rate</span>
-          </span>
-        </div>
-        <div class="stat">
-          <span class="stat__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
-          <span>
-            <span class="stat__num">ISO</span>
-            <span class="stat__label" data-i18n="stats.iso">Compliant Processes</span>
-          </span>
-        </div>
+  <!-- ============ 2. TRUST STRIP  (metrics removed per client) ============ -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-item" data-reveal>
+        <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+        <span>
+          <strong data-i18n="trust.b1.title">Industry Experts</strong>
+          <span data-i18n="trust.b1.text">Multi-sector specialists</span>
+        </span>
+      </div>
+      <div class="trust-item" data-reveal data-reveal-delay="80">
+        <svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>
+        <span>
+          <strong data-i18n="trust.b2.title">Middle East Focus</strong>
+          <span data-i18n="trust.b2.text">Deep market knowledge</span>
+        </span>
+      </div>
+      <div class="trust-item" data-reveal data-reveal-delay="160">
+        <svg class="icon" aria-hidden="true"><use href="#i-trophy"></use></svg>
+        <span>
+          <strong data-i18n="trust.b3.title">Results Driven</strong>
+          <span data-i18n="trust.b3.text">Strategic. Practical. Proven.</span>
+        </span>
+      </div>
+      <div class="trust-item" data-reveal data-reveal-delay="240">
+        <svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg>
+        <span>
+          <strong data-i18n="trust.b4.title">Long-Term Partnerships</strong>
+          <span data-i18n="trust.b4.text">Your growth is our mission</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 3. YOUR JOURNEY TO THE MARKET ================= -->
+  <section class="section section--tight journey" id="journey">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="journey.eyebrow">The Path We Walk With You</span>
+        <h2 data-i18n="journey.title">Your Journey to the Market</h2>
       </div>
 
-      <!-- Sector strip. To show real client or partner logos instead, replace each
-           <span class="client-logo"> with <img src="assets/img/clients/name.svg" alt="Client">
-           — only for organisations that have authorised you to display their mark. -->
-      <div class="client-logos" data-reveal data-reveal-delay="120">
-        <span class="client-logo">
-          <svg class="icon" aria-hidden="true"><use href="#i-factory"></use></svg>
-          <span data-i18n="trust.sector1">Oil &amp; Gas</span>
-        </span>
-        <span class="client-logo">
-          <svg class="icon" aria-hidden="true"><use href="#i-flask"></use></svg>
-          <span data-i18n="trust.sector2">Petrochemicals</span>
-        </span>
-        <span class="client-logo">
-          <svg class="icon" aria-hidden="true"><use href="#i-zap"></use></svg>
-          <span data-i18n="trust.sector3">Energy &amp; Utilities</span>
-        </span>
-        <span class="client-logo">
-          <svg class="icon" aria-hidden="true"><use href="#i-building"></use></svg>
-          <span data-i18n="trust.sector4">Government Tenders</span>
-        </span>
-      </div>
+      <ol class="journey__steps">
+        <li class="jstep" data-reveal>
+          <span class="jstep__ring">
+            <span class="jstep__num">01</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-door"></use></svg>
+          </span>
+          <h3 data-i18n="journey.s1.title">Enter</h3>
+          <p data-i18n="journey.s1.text">Registration &amp; Market Access</p>
+        </li>
+        <li class="jstep" data-reveal data-reveal-delay="90">
+          <span class="jstep__ring">
+            <span class="jstep__num">02</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-clipboard-check"></use></svg>
+          </span>
+          <h3 data-i18n="journey.s2.title">Qualify</h3>
+          <p data-i18n="journey.s2.text">Prequalification &amp; Technical Compliance</p>
+        </li>
+        <li class="jstep" data-reveal data-reveal-delay="180">
+          <span class="jstep__ring">
+            <span class="jstep__num">03</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-target"></use></svg>
+          </span>
+          <h3 data-i18n="journey.s3.title">Compete</h3>
+          <p data-i18n="journey.s3.text">Tender Strategy &amp; Bid Preparation</p>
+        </li>
+        <li class="jstep" data-reveal data-reveal-delay="270">
+          <span class="jstep__ring">
+            <span class="jstep__num">04</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-handshake"></use></svg>
+          </span>
+          <h3 data-i18n="journey.s4.title">Win</h3>
+          <p data-i18n="journey.s4.text">Pricing &amp; Commercial Strategy</p>
+        </li>
+        <li class="jstep" data-reveal data-reveal-delay="360">
+          <span class="jstep__ring">
+            <span class="jstep__num">05</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-trending-up"></use></svg>
+          </span>
+          <h3 data-i18n="journey.s5.title">Grow</h3>
+          <p data-i18n="journey.s5.text">Business Development &amp; Supply Chain</p>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -233,31 +271,31 @@
 
       <div class="features">
         <div class="feature" data-reveal>
-          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></span>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg></span>
           <div>
-            <h3 data-i18n="home.why1.title">Local Expertise, Global Standards</h3>
-            <p data-i18n="home.why1.text">Deep understanding of the Middle Eastern market combined with modern international practices.</p>
+            <h3 data-i18n="home.why1.title">Multi-Sector Expertise</h3>
+            <p data-i18n="home.why1.text">Oil and gas, petrochemicals, pipelines, mechanical power and renewable energy — under one roof.</p>
           </div>
         </div>
         <div class="feature" data-reveal data-reveal-delay="90">
-          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"></use></svg></span>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></span>
           <div>
-            <h3 data-i18n="home.why2.title">Long-Term Partnership</h3>
-            <p data-i18n="home.why2.text">We treat every client as a strategic partner, not a transaction.</p>
+            <h3 data-i18n="home.why2.title">Middle East Market Focus</h3>
+            <p data-i18n="home.why2.text">We work where you bid. Local buyer knowledge, local requirements, local follow-up.</p>
           </div>
         </div>
         <div class="feature" data-reveal data-reveal-delay="180">
-          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-bar-chart"></use></svg></span>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-clipboard-check"></use></svg></span>
           <div>
-            <h3 data-i18n="home.why3.title">Data-Driven Solutions</h3>
-            <p data-i18n="home.why3.text">Technical analysis, competitive pricing strategies and feasibility studies.</p>
+            <h3 data-i18n="home.why3.title">End-to-End Tender Support</h3>
+            <p data-i18n="home.why3.text">From first registration to submitted bid and evaluation follow-up — one team, one thread.</p>
           </div>
         </div>
         <div class="feature" data-reveal data-reveal-delay="270">
-          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg></span>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg></span>
           <div>
-            <h3 data-i18n="home.why4.title">Scalable &amp; Flexible</h3>
-            <p data-i18n="home.why4.text">Our solutions grow with your business, from startup to market leader.</p>
+            <h3 data-i18n="home.why4.title">Senior Industry Experience</h3>
+            <p data-i18n="home.why4.text">Consultants who have sat on both sides of the tender table, not junior researchers.</p>
           </div>
         </div>
       </div>
@@ -275,10 +313,10 @@
           <div>
             <span class="eyebrow" data-i18n="home.case.eyebrow">Success Story</span>
             <h2 data-i18n="home.case.title">From Startup to Major Supplier</h2>
-            <p data-i18n="home.case.text">How we helped a mid-sized chemical company register with a national oil company and win their first $2M tender.</p>
+            <p data-i18n="home.case.text">How we helped a mid-sized oilfield company register with a national oil company and win a $2M tender.</p>
             <div class="btn-group mt-24">
-              <a class="btn btn-gold" href="projects.html">
-                <span data-i18n="home.case.btn">Explore Case Studies</span>
+              <a class="btn btn-gold" href="success-stories.html">
+                <span data-i18n="home.case.btn">Explore Success Stories</span>
                 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
               </a>
             </div>
@@ -303,7 +341,7 @@
               <span class="spot-ico"><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg></span>
               <div>
                 <h4 data-i18n="common.results">Results</h4>
-                <p data-i18n="home.case.results">Successfully registered and won their first $2M tender within six months.</p>
+                <p data-i18n="home.case.results">Successfully registered and won a $2M tender within twelve months.</p>
               </div>
             </li>
           </ul>
@@ -332,10 +370,10 @@
               <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg><span data-i18n="post1.date">12 March 2026</span></span>
               <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><span data-i18n="post1.read">6 min read</span></span>
             </div>
-            <h3 class="card__title"><a href="blog-post.html" data-i18n="post1.title">5 Common Mistakes in Tender Submissions and How to Avoid Them</a></h3>
+            <h3 class="card__title"><a href="insights-post.html" data-i18n="post1.title">5 Common Mistakes in Tender Submissions and How to Avoid Them</a></h3>
             <p class="card__text" data-i18n="post1.excerpt">Avoid costly errors and improve your chances of winning.</p>
             <div class="card__foot">
-              <a class="link-arrow" href="blog-post.html">
+              <a class="link-arrow" href="insights-post.html">
                 <span data-i18n="common.readMore">Read More</span>
                 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
               </a>
@@ -353,10 +391,10 @@
               <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg><span data-i18n="post2.date">28 February 2026</span></span>
               <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><span data-i18n="post2.read">8 min read</span></span>
             </div>
-            <h3 class="card__title"><a href="blog.html" data-i18n="post2.title">How to Register as a Supplier with Major Oil &amp; Gas Companies in the Middle East</a></h3>
+            <h3 class="card__title"><a href="insights.html" data-i18n="post2.title">How to Register as a Supplier with Major Oil &amp; Gas Companies in the Middle East</a></h3>
             <p class="card__text" data-i18n="post2.excerpt">A step-by-step guide for companies looking to enter the market.</p>
             <div class="card__foot">
-              <a class="link-arrow" href="blog.html">
+              <a class="link-arrow" href="insights.html">
                 <span data-i18n="common.readMore">Read More</span>
                 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
               </a>
@@ -374,10 +412,10 @@
               <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg><span data-i18n="post3.date">14 February 2026</span></span>
               <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><span data-i18n="post3.read">5 min read</span></span>
             </div>
-            <h3 class="card__title"><a href="blog.html" data-i18n="post3.title">The Future of Business Development in the Chemical Sector</a></h3>
+            <h3 class="card__title"><a href="insights.html" data-i18n="post3.title">The Future of Business Development in the Chemical Sector</a></h3>
             <p class="card__text" data-i18n="post3.excerpt">Trends, opportunities and strategies for sustainable growth.</p>
             <div class="card__foot">
-              <a class="link-arrow" href="blog.html">
+              <a class="link-arrow" href="insights.html">
                 <span data-i18n="common.readMore">Read More</span>
                 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
               </a>
@@ -387,7 +425,7 @@
       </div>
 
       <div class="btn-group btn-group--center mt-56" data-reveal>
-        <a class="btn btn-outline" href="blog.html">
+        <a class="btn btn-outline" href="insights.html">
           <span data-i18n="home.blog.visit">Visit Our Blog</span>
           <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
         </a>
@@ -397,11 +435,21 @@
 
   <!-- ========================== 8. FINAL CTA ======================== -->
   <section class="cta-band">
+    <!-- Spread / global reach motif — the bridge now lives in the footer -->
     <svg class="cta-band__art" viewBox="0 0 420 200" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-      <path d="M-20 170h460" stroke="currentColor" stroke-width="2"/>
-      <path d="M20 170c40-90 140-120 190-120s150 30 190 120" stroke="currentColor" stroke-width="2"/>
-      <path d="M60 170V96M110 170V70M160 170V56M210 170V50M260 170V56M310 170V70M360 170V96" stroke="currentColor" stroke-width="1.4"/>
-      <path d="M-20 186h460" stroke="currentColor" stroke-width="6" opacity=".5"/>
+      <path d="M120 100C180 40 262 28 332 44" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C192 74 292 74 374 94" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C186 118 280 138 352 152" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C150 150 200 178 264 188" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C86 58 58 36 22 26" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="120" cy="100" r="21" stroke="currentColor" stroke-width="1.2" opacity=".65"/>
+      <circle cx="120" cy="100" r="36" stroke="currentColor" stroke-width="1" opacity=".4"/>
+      <circle cx="120" cy="100" r="7.5" fill="currentColor"/>
+      <circle cx="332" cy="44" r="4.5" fill="currentColor"/>
+      <circle cx="374" cy="94" r="4.5" fill="currentColor"/>
+      <circle cx="352" cy="152" r="4.5" fill="currentColor"/>
+      <circle cx="264" cy="188" r="4.5" fill="currentColor"/>
+      <circle cx="22" cy="26" r="4.5" fill="currentColor"/>
     </svg>
     <div class="container cta-band__inner">
       <h2 data-i18n="cta.title">Ready to Unlock New Growth Opportunities?</h2>
@@ -412,7 +460,7 @@
         </a>
         <a class="btn btn-ghost-light" href="contact.html#consultation">
           <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
-          <span data-i18n="cta.schedule">Schedule a Free Consultation</span>
+          <span data-i18n="cta.schedule">Schedule a Consultation</span>
         </a>
       </div>
     </div>

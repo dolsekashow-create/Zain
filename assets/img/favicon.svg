@@ -1,5 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Zain Consulting">
   <rect width="64" height="64" rx="14" fill="#0C2340"/>
-  <path d="M16 14H48V21L26 43H48V50H16V43L38 21H16Z" fill="#C99B3F"/>
-  <path d="M12 56.5C20 50.5 44 50.5 52 56.5" fill="none" stroke="#C99B3F" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  <!-- Eye of Horus (wedjat) — the Zain Consulting brand symbol -->
+  <g transform="translate(6.5,10.9) scale(0.485)" fill="none" stroke="#C99B3F"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 27C26 4 64 -1 100 10" stroke-width="9.6"/>
+    <path d="M1 44C22 20 64 15 106 28C80 53 36 60 1 44Z" fill="#C99B3F" stroke="none"/>
+    <circle cx="55" cy="36" r="10.5" fill="#0C2340" stroke="none"/>
+    <path d="M31 56C29 66 26 76 22 88" stroke-width="8.4"/>
+    <path d="M63 57C61 77 73 89 87 86C99 83 102 71 94 65" stroke-width="8.4"/>
+  </g>
 </svg>

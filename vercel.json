@@ -4,6 +4,11 @@
   "buildCommand": null,
   "installCommand": null,
   "outputDirectory": ".",
+  "redirects": [
+    { "source": "/projects.html", "destination": "/success-stories.html", "permanent": true },
+    { "source": "/blog.html", "destination": "/insights.html", "permanent": true },
+    { "source": "/blog-post.html", "destination": "/insights-post.html", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/img/(.*)",

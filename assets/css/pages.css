@@ -724,6 +724,208 @@
 .error-page__code span { color: var(--gold-500); }
 
 /* --------------------------------------------------------------------------
+   13b. Hero kicker & sub-headline
+   -------------------------------------------------------------------------- */
+.hero__kicker {
+  display: block;
+  font-family: var(--font-head);
+  font-size: .78rem; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold-400);
+  margin-bottom: 18px;
+}
+[dir="rtl"] .hero__kicker { letter-spacing: .06em; }
+.hero__sub {
+  font-family: var(--font-head);
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   13c. Trust strip (replaces the deleted metrics)
+   -------------------------------------------------------------------------- */
+.trust-bar { background: var(--navy-800); position: relative; }
+.trust-bar::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(760px 200px at 50% 0%, rgba(201,155,63,.16), transparent 70%);
+  pointer-events: none;
+}
+.trust-bar__inner {
+  position: relative;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  padding-block: 26px;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 14px;
+  padding-inline: 26px;
+  border-inline-end: 1px solid rgba(255,255,255,.12);
+}
+.trust-item:last-child { border-inline-end: 0; }
+.trust-item > .icon { width: 32px; height: 32px; color: var(--gold-500); stroke-width: 1.5; }
+.trust-item strong {
+  display: block; color: #fff; font-family: var(--font-head);
+  font-size: .92rem; font-weight: 600; line-height: 1.3;
+}
+.trust-item span span { font-size: .82rem; color: rgba(255,255,255,.62); }
+
+/* --------------------------------------------------------------------------
+   13d. Your Journey to the Market
+   -------------------------------------------------------------------------- */
+.journey { background: var(--bg-alt); }
+.journey__steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
+  position: relative;
+}
+.journey__steps::before {
+  content: '';
+  position: absolute; top: 47px; inset-inline: 12%;
+  height: 2px; z-index: 0;
+  background: repeating-linear-gradient(90deg, var(--gold-200) 0 8px, transparent 8px 18px);
+}
+.jstep { position: relative; z-index: 1; text-align: center; margin: 0; }
+.jstep__ring {
+  position: relative;
+  width: 94px; height: 94px; margin: 0 auto 20px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--navy-800);
+  border: 2px solid var(--gold-200);
+  box-shadow: 0 0 0 6px var(--bg-alt);
+  transition: transform var(--t), border-color var(--t);
+}
+.jstep:hover .jstep__ring { transform: translateY(-4px); border-color: var(--gold-500); }
+.jstep__ring .icon { width: 36px; height: 36px; color: var(--gold-400); stroke-width: 1.6; }
+/* Centred with auto margins rather than translateX(%), which does not mirror in RTL. */
+.jstep__num {
+  position: absolute; top: -11px;
+  inset-inline: 0;
+  width: fit-content;
+  margin-inline: auto;
+  background: var(--gold-500); color: var(--navy-900);
+  font-family: var(--font-head); font-size: .72rem; font-weight: 700;
+  padding: 3px 11px; border-radius: var(--r-pill);
+  border: 2px solid var(--bg-alt);
+}
+.jstep::after {
+  content: '';
+  position: absolute; top: 41px; inset-inline-end: -6px;
+  width: 11px; height: 11px;
+  border-top: 2.5px solid var(--gold-500);
+  border-inline-end: 2.5px solid var(--gold-500);
+  transform: rotate(45deg);
+}
+[dir="rtl"] .jstep::after { transform: rotate(-135deg); }
+.jstep:last-child::after { display: none; }
+.jstep h3 {
+  font-size: 1.02rem; text-transform: uppercase; letter-spacing: .07em;
+  margin-bottom: .3em; color: var(--navy-800);
+}
+[dir="rtl"] .jstep h3 { letter-spacing: 0; }
+.jstep p { font-size: .84rem; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   13e. Network banner (Team page)
+   -------------------------------------------------------------------------- */
+.network-banner {
+  background: var(--navy-800);
+  border-radius: var(--r-lg);
+  padding: 44px 40px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.network-banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(700px 280px at 50% 0%, rgba(201,155,63,.2), transparent 65%);
+}
+.network-banner > * { position: relative; }
+.network-banner h2 { color: #fff; font-size: clamp(1.25rem, 2.4vw, 1.9rem); margin-bottom: .5em; }
+.network-banner h2 .accent { color: var(--gold-400); }
+.sector-chips {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  list-style: none; margin: 26px 0 0; padding: 0;
+}
+.sector-chips li {
+  margin: 0;
+  font-family: var(--font-head); font-size: .78rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(201,155,63,.4);
+  padding: 9px 16px; border-radius: var(--r-pill);
+}
+[dir="rtl"] .sector-chips li { letter-spacing: 0; }
+
+/* --------------------------------------------------------------------------
+   13f. How We Work (Services page)
+   -------------------------------------------------------------------------- */
+.howwework {
+  position: relative;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
+  list-style: none; margin: 0; padding: 0;
+}
+.howwework::before {
+  content: '';
+  position: absolute; top: 38px; inset-inline: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-400) 12%, var(--gold-500) 50%, var(--gold-400) 88%, transparent);
+  z-index: 0;
+}
+.hww { position: relative; z-index: 1; text-align: center; margin: 0; }
+.hww__tile {
+  width: 76px; height: 76px; margin: 0 auto 16px;
+  display: grid; place-items: center;
+  background: var(--navy-800); color: var(--gold-400);
+  border-radius: var(--r-md);
+  box-shadow: 0 0 0 8px var(--bg);
+  transition: transform var(--t), background var(--t), color var(--t);
+}
+.section--alt .hww__tile { box-shadow: 0 0 0 8px var(--bg-alt); }
+.hww:hover .hww__tile { transform: translateY(-5px); background: var(--gold-500); color: var(--navy-900); }
+.hww__tile .icon { width: 32px; height: 32px; stroke-width: 1.6; }
+.hww__step {
+  display: inline-grid; place-items: center;
+  width: 30px; height: 30px; margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--gold-100); color: var(--gold-700);
+  border: 1.5px solid var(--gold-200);
+  font-family: var(--font-head); font-size: .82rem; font-weight: 700;
+}
+.hww h4 { font-size: 1rem; margin-bottom: .35em; }
+.hww p { font-size: .84rem; margin: 0; }
+
+/* --------------------------------------------------------------------------
+   13g. Contact branches
+   -------------------------------------------------------------------------- */
+.branch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.branch {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--r-md);
+  padding: 20px 20px 18px;
+}
+.branch__name {
+  display: flex; align-items: center; gap: 9px;
+  color: #fff; font-family: var(--font-head);
+  font-size: .8rem; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; margin-bottom: 14px;
+}
+[dir="rtl"] .branch__name { letter-spacing: .03em; }
+.branch__name .icon { width: 17px; height: 17px; color: var(--gold-400); }
+.branch dl { margin: 0; display: grid; gap: 10px; }
+.branch dt {
+  font-size: .72rem; color: rgba(255,255,255,.55);
+  letter-spacing: .05em; margin-bottom: 2px;
+}
+.branch dd { margin: 0; font-size: .9rem; }
+.branch dd a { color: rgba(255,255,255,.86); }
+.branch dd a:hover { color: var(--gold-400); }
+
+/* --------------------------------------------------------------------------
    14. Responsive
    -------------------------------------------------------------------------- */
 @media (max-width: 1180px) {
@@ -732,7 +934,7 @@
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .philosophy__media { width: 100%; opacity: .3; }
   .philosophy__media::after { background: linear-gradient(180deg, rgba(12,35,64,.9), rgba(12,35,64,.96)); }
   .philosophy__inner { grid-template-columns: 1fr; }
@@ -751,6 +953,14 @@
   .case-detail__head { grid-template-columns: 1fr; }
   .csr-grid { grid-template-columns: 1fr; }
   .newsletter { grid-template-columns: 1fr; }
+
+  .trust-bar__inner { grid-template-columns: repeat(2, 1fr); gap: 22px 0; }
+  .trust-item:nth-child(2n) { border-inline-end: 0; }
+  .journey__steps { grid-template-columns: repeat(3, 1fr); gap: 34px 18px; }
+  .journey__steps::before { display: none; }
+  .jstep:nth-child(3n)::after, .jstep:last-child::after { display: none; }
+  .howwework { grid-template-columns: repeat(3, 1fr); gap: 34px 20px; }
+  .howwework::before { display: none; }
 }
 
 @media (max-width: 900px) {
@@ -786,6 +996,13 @@
   .spotlight__inner { padding: 32px 22px; }
   .story__stat { position: static; margin-top: 18px; display: inline-block; }
   .svc-block__num { width: 58px; height: 58px; font-size: 1.25rem; top: -14px; inset-inline-start: -10px; }
+  .trust-bar__inner { grid-template-columns: 1fr; gap: 18px; }
+  .trust-item { border-inline-end: 0; padding-inline: 0; }
+  .journey__steps { grid-template-columns: 1fr; gap: 30px; }
+  .jstep::after { display: none; }
+  .howwework { grid-template-columns: 1fr; gap: 30px; }
+  .branch-grid { grid-template-columns: 1fr; }
+  .network-banner { padding: 32px 22px; }
   .newsletter { padding: 32px 24px; }
   .newsletter input { min-width: 100%; }
   .newsletter form { width: 100%; }
