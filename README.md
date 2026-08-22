@@ -167,6 +167,25 @@ nothing else needs to change.
 The header lockup is assembled in `components.js` (`brand()`): the mark image plus the company
 name and slogan as live text, so the slogan stays translatable and stays crisp at any size.
 
+### Page banner image
+
+Every inner page banner (`.page-hero`) uses the same photograph as the home page hero, set once in
+`assets/css/style.css`:
+
+```css
+.page-hero { --page-hero-img: url('../img/hero-meeting.jpg'); --page-hero-pos: 60% 42%; }
+```
+
+Change that one line to change every banner. To give a single page its own picture, set the
+variable on that section only — the path is then relative to the HTML file:
+
+```html
+<section class="page-hero" style="--page-hero-img:url('assets/img/service-supply-chain.jpg')">
+```
+
+A navy wash sits over the photo so white headings keep roughly 6:1 contrast. If you swap in a
+much lighter image, deepen the `linear-gradient` alphas in `.page-hero::before` to match.
+
 ---
 
 ## Connecting the contact form
