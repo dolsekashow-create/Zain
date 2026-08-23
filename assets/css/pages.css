@@ -98,64 +98,97 @@
 /* --------------------------------------------------------------------------
    3. Home — Philosophy split
    -------------------------------------------------------------------------- */
-.philosophy {
-  position: relative;
+/* Empowerment panel and Why Choose Us share one band, per the brand guide. */
+.philosophy-band { padding-block: var(--section-y); }
+.pband {
+  display: grid;
+  grid-template-columns: 1fr 1.06fr;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--sh-md);
+}
+
+.pband__left {
   background: var(--navy-800);
   color: rgba(255,255,255,.76);
+  padding: 46px 42px 42px;
+  position: relative;
   overflow: hidden;
-  isolation: isolate;
 }
-.philosophy__media {
-  position: absolute;
-  inset-block: 0;
-  inset-inline-end: 0;
-  width: 50%;
-  z-index: -1;
-}
-.philosophy__media img { width: 100%; height: 100%; object-fit: cover; }
-.philosophy__media::after {
+.pband__left::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(90deg, var(--navy-800) 0%, rgba(12,35,64,.55) 32%, rgba(12,35,64,.08) 100%);
+  background: radial-gradient(520px 260px at 12% 0%, rgba(201,155,63,.20), transparent 62%);
+  pointer-events: none;
 }
-[dir="rtl"] .philosophy__media::after {
-  background: linear-gradient(270deg, var(--navy-800) 0%, rgba(12,35,64,.55) 32%, rgba(12,35,64,.08) 100%);
-}
-.philosophy__inner { display: grid; grid-template-columns: 1fr 1fr; }
-.philosophy__content { padding-block: 88px; padding-inline-end: 56px; max-width: 560px; }
-.philosophy__content h2 { color: #fff; }
-.philosophy__quote {
-  font-size: .95rem; color: rgba(255,255,255,.76); margin-bottom: 26px;
-}
-.philosophy__points { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.philosophy__points li {
-  display: flex; gap: 12px; align-items: flex-start;
-  font-size: .92rem; color: rgba(255,255,255,.8); margin: 0;
-}
-.philosophy__points .icon { width: 18px; height: 18px; color: var(--gold-400); margin-top: 5px; }
-
-/* --------------------------------------------------------------------------
-   4. Home — Why choose us (features)
-   -------------------------------------------------------------------------- */
-.features { display: grid; grid-template-columns: repeat(4, 1fr); }
-.feature {
-  display: flex; gap: 16px; align-items: flex-start;
-  padding: 6px 30px;
-  border-inline-end: 1px solid var(--line);
-}
-.feature:last-child { border-inline-end: 0; }
-.feature__icon {
-  width: 54px; height: 54px; flex: none;
+.pband__left > * { position: relative; }
+.pband__emblem {
+  width: 72px; height: 72px; margin-bottom: 22px;
   display: grid; place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--gold-500);
+  color: var(--gold-400);
+}
+.pband__emblem .icon { width: 32px; height: 32px; }
+.pband__left h2 {
+  color: #fff;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .6em;
+}
+[dir="rtl"] .pband__left h2 { letter-spacing: 0; }
+.pband__left p { font-size: .93rem; margin: 0; }
+
+.chain {
+  list-style: none; margin: 32px 0 0; padding: 0;
+  display: flex; align-items: flex-start; gap: 4px;
+}
+.chain li {
+  flex: 1; margin: 0; position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 9px; text-align: center;
+}
+.chain__ico { color: var(--gold-400); }
+.chain__ico .icon { width: 30px; height: 30px; stroke-width: 1.5; }
+.chain__label {
+  font-family: var(--font-head); font-size: .58rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.82);
+}
+[dir="rtl"] .chain__label { letter-spacing: .02em; font-size: .66rem; }
+.chain li:not(:last-child)::after {
+  content: '';
+  position: absolute; top: 10px; inset-inline-end: -5px;
+  width: 9px; height: 9px;
+  border-top: 2px solid var(--gold-500);
+  border-inline-end: 2px solid var(--gold-500);
+  transform: rotate(45deg);
+}
+[dir="rtl"] .chain li:not(:last-child)::after { transform: rotate(-135deg); }
+
+.pband__right { background: var(--cream-soft); padding: 46px 42px 42px; }
+.pband__right h2 {
+  text-align: center;
+  font-size: clamp(1.1rem, 1.9vw, 1.5rem);
+  text-transform: uppercase; letter-spacing: .04em;
+  margin-bottom: 32px;
+}
+[dir="rtl"] .pband__right h2 { letter-spacing: 0; }
+.whygrid { display: grid; grid-template-columns: 1fr 1fr; }
+.whyitem { display: flex; gap: 14px; align-items: flex-start; padding: 22px 22px; }
+.whyitem:nth-child(odd) { border-inline-end: 1px solid var(--line); }
+.whyitem:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+.whyitem__ico {
+  width: 46px; height: 46px; flex: none;
+  display: grid; place-items: center;
+  border-radius: var(--r-sm);
   background: var(--gold-100); color: var(--gold-600);
   border: 1px solid var(--gold-200);
-  border-radius: var(--r-md);
-  transition: background var(--t), color var(--t), transform var(--t);
+  transition: background var(--t), color var(--t);
 }
-.feature__icon .icon { width: 24px; height: 24px; }
-.feature:hover .feature__icon { background: var(--gold-500); color: #fff; transform: translateY(-3px); border-color: transparent; }
-.feature h3 { font-size: 1.02rem; margin-bottom: .35em; }
-.feature p { font-size: .88rem; margin: 0; }
+.whyitem__ico .icon { width: 22px; height: 22px; }
+.whyitem:hover .whyitem__ico { background: var(--gold-500); color: #fff; border-color: transparent; }
+.whyitem h3 { font-size: .98rem; margin-bottom: .3em; }
+.whyitem p { font-size: .86rem; margin: 0; }
 
 /* --------------------------------------------------------------------------
    5. Home — Case study spotlight
@@ -774,30 +807,40 @@
 /* --------------------------------------------------------------------------
    13d. Your Journey to the Market
    -------------------------------------------------------------------------- */
-.journey { background: var(--bg-alt); }
+.journey { background: var(--cream); padding-bottom: calc(var(--section-y) * .66 + 26px); }
 .journey__steps {
   list-style: none; margin: 0; padding: 0;
   display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
   position: relative;
 }
-.journey__steps::before {
+/* thin rail under the row, with a dot beneath each step */
+.journey__steps::after {
   content: '';
-  position: absolute; top: 47px; inset-inline: 12%;
-  height: 2px; z-index: 0;
-  background: repeating-linear-gradient(90deg, var(--gold-200) 0 8px, transparent 8px 18px);
+  position: absolute; inset-inline: 9%; bottom: -22px;
+  height: 1px; background: var(--gold-200);
 }
 .jstep { position: relative; z-index: 1; text-align: center; margin: 0; }
+.jstep::before {
+  content: '';
+  position: absolute; bottom: -26px; inset-inline: 0;
+  width: 9px; height: 9px; margin-inline: auto;
+  border-radius: 50%; background: var(--gold-500);
+}
 .jstep__ring {
   position: relative;
   width: 94px; height: 94px; margin: 0 auto 20px;
   display: grid; place-items: center;
   border-radius: 50%;
   background: var(--navy-800);
-  border: 2px solid var(--gold-200);
-  box-shadow: 0 0 0 6px var(--bg-alt);
-  transition: transform var(--t), border-color var(--t);
+  border: 2px solid var(--gold-500);
+  /* cream gap, then an outer gold ring — the double ring from the brand guide */
+  box-shadow: 0 0 0 4px var(--cream), 0 0 0 6px var(--gold-400);
+  transition: transform var(--t), box-shadow var(--t);
 }
-.jstep:hover .jstep__ring { transform: translateY(-4px); border-color: var(--gold-500); }
+.jstep:hover .jstep__ring {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 4px var(--cream), 0 0 0 7px var(--gold-500);
+}
 .jstep__ring .icon { width: 36px; height: 36px; color: var(--gold-400); stroke-width: 1.6; }
 /* Centred with auto margins rather than translateX(%), which does not mirror in RTL. */
 .jstep__num {
@@ -808,14 +851,14 @@
   background: var(--gold-500); color: var(--navy-900);
   font-family: var(--font-head); font-size: .72rem; font-weight: 700;
   padding: 3px 11px; border-radius: var(--r-pill);
-  border: 2px solid var(--bg-alt);
+  border: 2px solid var(--cream);
 }
 .jstep::after {
   content: '';
-  position: absolute; top: 41px; inset-inline-end: -6px;
-  width: 11px; height: 11px;
-  border-top: 2.5px solid var(--gold-500);
-  border-inline-end: 2.5px solid var(--gold-500);
+  position: absolute; top: 38px; inset-inline-end: -8px;
+  width: 15px; height: 15px;
+  border-top: 4px solid var(--gold-500);
+  border-inline-end: 4px solid var(--gold-500);
   transform: rotate(45deg);
 }
 [dir="rtl"] .jstep::after { transform: rotate(-135deg); }
@@ -929,16 +972,11 @@
    14. Responsive
    -------------------------------------------------------------------------- */
 @media (max-width: 1180px) {
-  .features { grid-template-columns: repeat(2, 1fr); gap: 34px 0; }
-  .feature:nth-child(2n) { border-inline-end: 0; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 1200px) {
-  .philosophy__media { width: 100%; opacity: .3; }
-  .philosophy__media::after { background: linear-gradient(180deg, rgba(12,35,64,.9), rgba(12,35,64,.96)); }
-  .philosophy__inner { grid-template-columns: 1fr; }
-  .philosophy__content { padding-inline-end: 0; max-width: 660px; }
+  .pband { grid-template-columns: 1fr; }
   .spotlight__inner { grid-template-columns: 1fr; gap: 34px; padding: 42px 34px; }
   .story { grid-template-columns: 1fr; gap: 52px; }
   .story__stat { inset-inline-end: 20px; }
@@ -956,9 +994,11 @@
 
   .trust-bar__inner { grid-template-columns: repeat(2, 1fr); gap: 22px 0; }
   .trust-item:nth-child(2n) { border-inline-end: 0; }
-  .journey__steps { grid-template-columns: repeat(3, 1fr); gap: 34px 18px; }
-  .journey__steps::before { display: none; }
+  .journey__steps { grid-template-columns: repeat(3, 1fr); gap: 46px 18px; }
+  .journey__steps::after { display: none; }
+  .jstep::before { display: none; }
   .jstep:nth-child(3n)::after, .jstep:last-child::after { display: none; }
+  .journey { padding-bottom: calc(var(--section-y) * .66); }
   .howwework { grid-template-columns: repeat(3, 1fr); gap: 34px 20px; }
   .howwework::before { display: none; }
 }
@@ -983,8 +1023,6 @@
 }
 
 @media (max-width: 620px) {
-  .features { grid-template-columns: 1fr; }
-  .feature { border-inline-end: 0; padding-inline: 0; }
   .team-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .check-list--2col { grid-template-columns: 1fr; }
@@ -1000,6 +1038,14 @@
   .trust-item { border-inline-end: 0; padding-inline: 0; }
   .journey__steps { grid-template-columns: 1fr; gap: 30px; }
   .jstep::after { display: none; }
+  .pband__left, .pband__right { padding: 32px 24px; }
+  .whygrid { grid-template-columns: 1fr; }
+  .whyitem { padding: 18px 0; border-inline-end: 0 !important; }
+  .whyitem:not(:last-child) { border-bottom: 1px solid var(--line); }
+  .whyitem:last-child { border-bottom: 0; }
+  .chain { flex-wrap: wrap; gap: 18px 4px; }
+  .chain li { flex: 0 0 30%; }
+  .chain li:not(:last-child)::after { display: none; }
   .howwework { grid-template-columns: 1fr; gap: 30px; }
   .branch-grid { grid-template-columns: 1fr; }
   .network-banner { padding: 32px 22px; }

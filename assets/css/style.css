@@ -33,6 +33,8 @@
   --bg: #FFFFFF;
   --bg-alt: #F5F8FB;
   --bg-soft: #FAFCFD;
+  --cream: #F8F4EA;        /* ivory panels from the brand guide */
+  --cream-soft: #FBF8F1;
 
   /* Type */
   --font-head: 'Poppins', 'Segoe UI', Tahoma, sans-serif;

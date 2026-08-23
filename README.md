@@ -154,15 +154,15 @@ Changing a token restyles the whole site.
 
 | File | Used for |
 |---|---|
+| `assets/img/logo-mark.png` | Mark only (hand, growth bars, Eye of Horus), transparent. Site header and footer. |
 | `assets/img/logo-zain.png` | Full stacked lockup — mark, "ZAIN CONSULTING", slogan. For decks, letterheads, social. |
-| `assets/img/logo-mark.png` | Mark only (hand, growth bars, Eye of Horus). Used in the site header and footer. |
 | `assets/img/favicon.svg` | Eye of Horus on navy — browser tab icon, vector. |
 | `assets/img/logo.svg` | Earlier wordmark, kept only as a fallback reference. |
 
-The symbol on the cuff is the **Eye of Horus**, replacing the Ankh that appeared in the original
-logo file. It was substituted in the raster itself, so `logo-zain.png` and `logo-mark.png` are the
-corrected artwork — if the design studio issues a new master file, replace those two PNGs and
-nothing else needs to change.
+`logo-mark.png` is cut out of the studio's official Eye-of-Horus master (the one supplied on a dark
+navy field). The background was removed with a colour-temperature flood fill — the artwork is warm
+gold, the field is cool navy — so the gold keeps its full opacity and the engraved detail inside the
+eye stays intact. If a new master arrives, replace this one PNG and nothing else changes.
 
 The header lockup is assembled in `components.js` (`brand()`): the mark image plus the company
 name and slogan as live text, so the slogan stays translatable and stays crisp at any size.
