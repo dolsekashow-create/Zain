@@ -287,6 +287,8 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
    -------------------------------------------------------------------------- */
 .brand { display: inline-flex; align-items: center; gap: 12px; }
 .brand__mark { width: auto; height: 48px; flex: none; }
+.brand--lockup { display: block; }
+.brand--lockup img { width: 186px; height: auto; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand__name {
   font-family: var(--font-head); font-weight: 700; font-size: 1.06rem;

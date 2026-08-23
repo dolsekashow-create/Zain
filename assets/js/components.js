@@ -77,20 +77,30 @@
   function icon(name, cls) {
     return '<svg class="icon' + (cls ? ' ' + cls : '') + '" aria-hidden="true"><use href="#i-' + name + '"></use></svg>';
   }
+
+  /* Bump ASSET_V whenever a logo or photo is replaced under its existing filename,
+     so browsers and the CDN fetch the new file instead of a cached copy. */
+  var ASSET_V = '2';
+  function asset(path) { return path + '?v=' + ASSET_V; }
   window.zcIcon = icon;
 
   /* ----------------------------------------------------------------------
      2. Brand mark
      ---------------------------------------------------------------------- */
   function brand(light) {
-    return '' +
-      '<a class="brand' + (light ? ' brand--light' : '') + '" href="index.html" aria-label="Zain Consulting">' +
-        '<img class="brand__mark" src="assets/img/logo-mark.png" alt="" width="160" height="176">' +
-        '<span class="brand__text">' +
-          '<span class="brand__name">Zain Consulting</span>' +
-          '<span class="brand__tag" data-i18n="brand.tagline">Your Bridge to Major Markets</span>' +
-        '</span>' +
-      '</a>';
+    return light
+        /* Bottom bar carries the full studio lockup — mark, wordmark and slogan. */
+        ? '<a class="brand brand--lockup" href="index.html">' +
+            '<img src="' + asset('assets/img/logo-lockup.png') + '" width="340" height="312"' +
+            ' alt="Zain Consulting — Your Bridge to Major Markets">' +
+          '</a>'
+        : '<a class="brand" href="index.html" aria-label="Zain Consulting">' +
+            '<img class="brand__mark" src="' + asset('assets/img/logo-mark.png') + '" alt="" width="224" height="230">' +
+            '<span class="brand__text">' +
+              '<span class="brand__name">Zain Consulting</span>' +
+              '<span class="brand__tag" data-i18n="brand.tagline">Your Bridge to Major Markets</span>' +
+            '</span>' +
+          '</a>';
   }
 
   /* ----------------------------------------------------------------------
@@ -169,7 +179,7 @@
       '<div class="mega mega--wide">' +
         '<div class="mega__grid">' + cols + '</div>' +
         '<div class="mega__foot">' +
-          '<span data-i18n="nav.mega.note">Not sure where to start? Book a free 30-minute discovery call.</span>' +
+          '<span data-i18n="nav.mega.note">Not sure where to start? Book a 30-minute discovery call.</span>' +
           '<a class="btn btn-gold btn-sm" href="contact.html#consultation">' +
             '<span data-i18n="cta.bookShort">Book a Consultation</span>' + icon('arrow-right') +
           '</a>' +
