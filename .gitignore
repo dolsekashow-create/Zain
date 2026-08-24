@@ -12,3 +12,6 @@ desktop.ini
 .claude/
 node_modules/
 *.log
+
+# Original photo drop from the client — the web copies live in assets/img/team/
+صور مستر زين/

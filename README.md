@@ -220,9 +220,14 @@ The newsletter form in `insights.html` (`newsletterForm()`) works the same way.
       `components.js` (footer), `contact.html`, `privacy.html` and `terms.html`.
 - [ ] Point the social links in `components.js` (`SOCIALS`) at the real profiles, and the LinkedIn
       buttons in `team.html` at each person's own profile.
-- [ ] Add real team photos: replace `<span class="member__initials">XX</span>` with
-      `<img src="assets/img/team/name.jpg" alt="Full name">`. The bios are placeholders written from
-      each job title — have the team confirm them.
+- [ ] Two team portraits are still missing — **Ashraf Abdelazim** and **Gamal Wahba** show initials
+      until their photos arrive. Drop the file into `assets/img/team/` and swap the
+      `<span class="member__initials">XX</span>` for an `<img>` copying a neighbouring card; set
+      `object-position` so the face stays in frame when the photo is cropped to the card.
+- [ ] The bios are placeholders written from each job title — have the team confirm them.
+- [ ] Confirm three name spellings. The site follows the written feedback, the photo filenames
+      differ: Ashraf **Pullissery** (file said Pullesserry), Muthana **Zaibeg** (file said Zaibag),
+      **Magdy Mohamed Ali** (file said Magdi M Ali).
 - [ ] Replace the stories in `success-stories.html` with real engagements, and publish client names
       only with written permission.
 - [ ] Have `privacy.html` and `terms.html` reviewed by legal counsel — they are drafted templates,
