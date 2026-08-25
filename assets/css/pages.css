@@ -35,6 +35,37 @@
     rgba(12,35,64,.20) 78%,
     rgba(12,35,64,.10) 100%);
 }
+/* Home hero: the brand's global-reach map instead of a photograph.
+   The artwork's own field is near-black, so its edges are dissolved with a radial
+   mask rather than colour-matched — that keeps the brand navy behind it. */
+.hero--map { background: linear-gradient(118deg, var(--navy-900) 0%, var(--navy-800) 58%, var(--navy-700) 100%); }
+.hero--map .hero__bg img {
+  object-fit: contain;
+  object-position: right center;
+  opacity: .92;
+  -webkit-mask-image: radial-gradient(115% 125% at 78% 50%, #000 40%, transparent 86%);
+  mask-image: radial-gradient(115% 125% at 78% 50%, #000 40%, transparent 86%);
+}
+.hero--map .hero__bg::after {
+  background: linear-gradient(90deg,
+    rgba(7,26,49,.95) 0%,
+    rgba(7,26,49,.80) 30%,
+    rgba(7,26,49,.34) 55%,
+    rgba(7,26,49,0) 78%);
+}
+[dir="rtl"] .hero--map .hero__bg img {
+  object-position: left center;
+  -webkit-mask-image: radial-gradient(115% 125% at 22% 50%, #000 40%, transparent 86%);
+  mask-image: radial-gradient(115% 125% at 22% 50%, #000 40%, transparent 86%);
+}
+[dir="rtl"] .hero--map .hero__bg::after {
+  background: linear-gradient(270deg,
+    rgba(7,26,49,.95) 0%,
+    rgba(7,26,49,.80) 30%,
+    rgba(7,26,49,.34) 55%,
+    rgba(7,26,49,0) 78%);
+}
+
 .hero__content { max-width: 640px; padding-block: 96px; position: relative; }
 .hero h1 { color: #fff; margin-bottom: .5em; letter-spacing: -.025em; }
 .hero__lead {
@@ -1010,6 +1041,19 @@
   .hero__bg::after,
   [dir="rtl"] .hero__bg::after {
     background: linear-gradient(180deg, rgba(7,26,49,.86) 0%, rgba(7,26,49,.92) 60%, rgba(7,26,49,.96) 100%);
+  }
+  /* Narrow screens: the map sits behind the text, so damp it right down. */
+  .hero--map .hero__bg::after,
+  [dir="rtl"] .hero--map .hero__bg::after {
+    background: linear-gradient(180deg, rgba(7,26,49,.82) 0%, rgba(7,26,49,.90) 55%, rgba(7,26,49,.96) 100%);
+  }
+  .hero--map .hero__bg img,
+  [dir="rtl"] .hero--map .hero__bg img {
+    object-fit: cover;
+    object-position: center 35%;
+    opacity: .5;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .hero__scroll { display: none; }
   .trust__inner { justify-content: center; gap: 28px; }
