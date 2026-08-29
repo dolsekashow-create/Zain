@@ -444,16 +444,16 @@ window.ZC_AR = {
   'trust.b4.text': 'نموّك هو مهمتنا',
   'journey.eyebrow': 'الطريق الذي نسلكه معك',
   'journey.title': 'رحلتك إلى السوق',
-  'journey.s1.title': 'الدخول',
-  'journey.s1.text': 'التسجيل والوصول إلى السوق',
-  'journey.s2.title': 'التأهيل',
-  'journey.s2.text': 'التأهيل المسبق والامتثال الفني',
-  'journey.s3.title': 'المنافسة',
-  'journey.s3.text': 'استراتيجية المناقصة وإعداد العطاء',
-  'journey.s4.title': 'الفوز',
-  'journey.s4.text': 'استراتيجية التسعير والجوانب التجارية',
-  'journey.s5.title': 'النمو',
-  'journey.s5.text': 'تطوير الأعمال وسلسلة التوريد',
+  'journey.s1.title': 'الرحلة',
+  'journey.s1.text': 'الفهم — رؤى السوق والعميل',
+  'journey.s2.title': 'التقييم',
+  'journey.s2.text': 'قرار التقدّم من عدمه',
+  'journey.s3.title': 'التموضع',
+  'journey.s3.text': 'أمام المنافسين',
+  'journey.s4.title': 'الربط',
+  'journey.s4.text': 'التأهيل المسبق والمناقصة',
+  'journey.s5.title': 'المنافسة',
+  'journey.s5.text': 'التفوّق على المنافسين',
   'title.why': 'لماذا زين للاستشارات — Zain Consulting',
   'team.network.eyebrow': 'خبراؤنا. ميزتك.',
   'team.network.title': 'زين للاستشارات <span class="accent">شبكة من المتخصصين في الصناعة</span>',
@@ -583,5 +583,8 @@ window.ZC_AR = {
   'why.method.eyebrow': 'منهجيتنا',
   'why.method.title': 'ست خطوات من النظرة الأولى إلى التوسّع',
   'why.method.sub': 'كيف نعمل معك داخل السوق — فهمه، وتحديد ما إذا كان التقدّم مجديًا، والتموضع أمام المنافسين، ثم النمو بعد الدخول.',
-  'why.method.caption': 'الرحلة · التقييم · التموضع · الربط · المنافسة · النمو'
+
+  /* -------------------------------- Client feedback round (2026-08) */
+  'journey.s6.title': 'النمو',
+  'journey.s6.text': 'التوسّع والتدرّج'
 };

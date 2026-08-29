@@ -557,18 +557,6 @@
 }
 .techcard li strong { color: var(--ink); }
 
-/* Six-step methodology artwork */
-.methodology { margin: 0; }
-.methodology img {
-  width: 100%; height: auto;
-  border-radius: var(--r-lg);
-  box-shadow: var(--sh-md);
-}
-.methodology figcaption {
-  margin-top: 14px; text-align: center;
-  font-size: .86rem; color: var(--muted);
-}
-
 .svc-anchor-nav {
   display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
   margin-bottom: 8px;
@@ -928,7 +916,7 @@
 .journey { background: var(--cream); padding-bottom: calc(var(--section-y) * .66 + 26px); }
 .journey__steps {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px;
   position: relative;
 }
 /* thin rail under the row, with a dot beneath each step */
@@ -960,6 +948,8 @@
   box-shadow: 0 0 0 4px var(--cream), 0 0 0 7px var(--gold-500);
 }
 .jstep__ring .icon { width: 36px; height: 36px; color: var(--gold-400); stroke-width: 1.6; }
+/* Brand artwork icons — rendered on the navy disc they were designed against. */
+.jstep__icon { width: 60px; height: 60px; object-fit: contain; display: block; }
 /* Centred with auto margins rather than translateX(%), which does not mirror in RTL. */
 .jstep__num {
   position: absolute; top: -11px;

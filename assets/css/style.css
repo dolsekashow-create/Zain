@@ -398,9 +398,16 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 }
 
 .mega--sm { width: 300px; margin-inline-start: -150px; }
+/* Centred on the viewport rather than on its nav item. Centring on the item put
+   the 980px panel off the left edge once the Arabic labels moved Services close
+   to the end of the bar. Fixed + auto margins centres it without a transform,
+   which would not mirror under RTL. */
 .mega--wide {
+  position: fixed;
+  top: calc(var(--header-h) + 12px);
+  inset-inline: 0;
   width: min(980px, calc(100vw - 60px));
-  margin-inline-start: calc(min(980px, 100vw - 60px) / -2);
+  margin-inline: auto;
 }
 
 .mega__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px 22px; }
@@ -768,6 +775,12 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
   .header-actions { gap: 10px; }
   .header-actions .btn { padding: 11px 15px; font-size: .78rem; }
   .lang-switch button { padding: 8px 10px; font-size: .74rem; }
+
+  /* Arabic labels run longer than the English ones and were pushing the header
+     a few pixels past the viewport between 1200 and 1400. */
+  [dir="rtl"] .nav__link { padding-inline: 6px; font-size: .84rem; }
+  [dir="rtl"] .nav__link::after { inset-inline: 6px; }
+  [dir="rtl"] .header-actions .btn { padding: 11px 12px; }
 }
 
 @media (max-width: 1200px) {
@@ -796,11 +809,14 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
   .nav__link::after { display: none; }
   .nav__item.is-current > .nav__link { color: var(--gold-600); }
 
-  .mega {
+  .mega,
+  .mega--wide {
     position: static;
     transform: none !important;
     width: auto !important;
-    margin-inline-start: 0 !important;
+    margin-inline: 0 !important;
+    inset-inline: auto !important;
+    top: auto;
     opacity: 1; visibility: visible; pointer-events: auto;
     box-shadow: none; border: 0; border-radius: 0;
     padding: 4px 0 10px;

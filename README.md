@@ -13,9 +13,9 @@ Drop it on any web host or GitHub Pages and it runs.
 
 | File | Page | Notes |
 |---|---|---|
-| `index.html` | Home | Hero, trust strip, Your Journey to the Market, What We Do, philosophy, why us, success story, insights, CTA |
+| `index.html` | Home | Hero, subtitle, trust strip, the six-step Journey, What We Do, philosophy, why us, success story, insights, CTA |
 | `about.html` | About Us | Story, Vision, Mission, Values (anchors: `#story`, `#vision`, `#mission`, `#values`) |
-| `why-zain.html` | Why Zain Consulting | Four value propositions, the six-step methodology graphic, brand value-proposition set |
+| `why-zain.html` | Why Zain Consulting | Four value propositions, the six-step methodology, brand value-proposition set |
 | `team.html` | Team | Network-of-specialists banner + 7 profiles with brief, core expertise and credentials |
 | `services.html` | Services | 4 practice areas, the technical sub-services team, and the 5-step How We Work visual |
 | `success-stories.html` | Success Stories | One detailed story + three summary cards |
@@ -166,6 +166,13 @@ eye stays intact. If a new master arrives, replace this one PNG and nothing else
 
 The header lockup is assembled in `components.js` (`brand()`): the mark image plus the company
 name and slogan as live text, so the slogan stays translatable and stays crisp at any size.
+
+### The six-step journey
+
+`Journey · Assess · Position · Connect · Compete · Grow` appears on the home page and on Why Zain
+Consulting, built from the same markup so the two never drift. The gold artwork lives in
+`assets/img/journey/` — one transparent PNG per step, named after the step. Swapping a step means
+replacing its PNG and editing the two `<li class=jstep>` blocks.
 
 ### Replacing an image
 
