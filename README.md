@@ -167,6 +167,13 @@ eye stays intact. If a new master arrives, replace this one PNG and nothing else
 The header lockup is assembled in `components.js` (`brand()`): the mark image plus the company
 name and slogan as live text, so the slogan stays translatable and stays crisp at any size.
 
+### Replacing an image
+
+Nothing here is content-hashed, so **give a replaced image a new filename** — otherwise browsers
+and the CDN keep serving the copy they already have. `service-tender-qualification-v2.jpg` carries
+its `-v2` for exactly that reason. Logos referenced from `components.js` are handled instead by
+bumping `ASSET_V` there, which appends `?v=N` to their URLs.
+
 ### Page banner image
 
 Every inner page banner (`.page-hero`) uses the same branded boardroom photograph, set once in
