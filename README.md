@@ -15,9 +15,9 @@ Drop it on any web host or GitHub Pages and it runs.
 |---|---|---|
 | `index.html` | Home | Hero, trust strip, Your Journey to the Market, What We Do, philosophy, why us, success story, insights, CTA |
 | `about.html` | About Us | Story, Vision, Mission, Values (anchors: `#story`, `#vision`, `#mission`, `#values`) |
-| `why-zain.html` | Why Zain Consulting | The four value propositions + the brand value-proposition set |
-| `team.html` | Team | Network-of-specialists banner + 9 team members |
-| `services.html` | Services | 4 practice areas in depth + the 5-step How We Work visual (anchors below) |
+| `why-zain.html` | Why Zain Consulting | Four value propositions, the six-step methodology graphic, brand value-proposition set |
+| `team.html` | Team | Network-of-specialists banner + 7 profiles with brief, core expertise and credentials |
+| `services.html` | Services | 4 practice areas, the technical sub-services team, and the 5-step How We Work visual |
 | `success-stories.html` | Success Stories | One detailed story + three summary cards |
 | `insights.html` | Insights | Featured post, category filter, 6 posts, newsletter block |
 | `insights-post.html` | Article | Full article template, written in both languages |
@@ -26,7 +26,7 @@ Drop it on any web host or GitHub Pages and it runs.
 | `404.html` | Not found | Used automatically by GitHub Pages |
 
 Service anchors: `services.html#tender-qualification`, `#business-development`,
-`#training-coaching`, `#supply-chain`.
+`#training-coaching`, `#supply-chain`, `#technical-support`.
 
 ---
 
@@ -169,11 +169,11 @@ name and slogan as live text, so the slogan stays translatable and stays crisp a
 
 ### Page banner image
 
-Every inner page banner (`.page-hero`) uses the same photograph as the home page hero, set once in
+Every inner page banner (`.page-hero`) uses the same branded boardroom photograph, set once in
 `assets/css/style.css`:
 
 ```css
-.page-hero { --page-hero-img: url('../img/hero-meeting.jpg'); --page-hero-pos: 60% 42%; }
+.page-hero { --page-hero-img: url('../img/page-banner.jpg'); --page-hero-pos: 60% 42%; }
 ```
 
 Change that one line to change every banner. To give a single page its own picture, set the
@@ -218,16 +218,9 @@ The newsletter form in `insights.html` (`newsletterForm()`) works the same way.
 - [ ] Confirm the contact details. `info@zainconsulting.com`, the Egypt numbers
       (`+2 048 234 7812`, `+20 10 3590 4464`) and the UAE number (`+971 55 9634349`) appear in
       `components.js` (footer), `contact.html`, `privacy.html` and `terms.html`.
-- [ ] Point the social links in `components.js` (`SOCIALS`) at the real profiles, and the LinkedIn
-      buttons in `team.html` at each person's own profile.
-- [ ] Two team portraits are still missing — **Ashraf Abdelazim** and **Gamal Wahba** show initials
-      until their photos arrive. Drop the file into `assets/img/team/` and swap the
-      `<span class="member__initials">XX</span>` for an `<img>` copying a neighbouring card; set
-      `object-position` so the face stays in frame when the photo is cropped to the card.
-- [ ] The bios are placeholders written from each job title — have the team confirm them.
-- [ ] Confirm three name spellings. The site follows the written feedback, the photo filenames
-      differ: Ashraf **Pullissery** (file said Pullesserry), Muthana **Zaibeg** (file said Zaibag),
-      **Magdy Mohamed Ali** (file said Magdi M Ali).
+- [ ] Create the LinkedIn, Instagram, Facebook and YouTube accounts on zainconsulting2002@gmail.com,
+      then replace the placeholder URLs in `components.js` (`SOCIALS`). Every team card already
+      points its LinkedIn icon at the company page and its mail icon at info@zainconsulting.com.
 - [ ] Replace the stories in `success-stories.html` with real engagements, and publish client names
       only with written permission.
 - [ ] Have `privacy.html` and `terms.html` reviewed by legal counsel — they are drafted templates,

@@ -87,6 +87,25 @@
 @keyframes heroBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 
 /* --------------------------------------------------------------------------
+   1b. Home — Hero subtitle
+   -------------------------------------------------------------------------- */
+.hero-sub { background: #fff; padding-block: 40px 36px; text-align: center; }
+.hero-sub p {
+  max-width: 940px; margin: 0 auto;
+  font-family: var(--font-head);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  font-weight: 400; line-height: 1.65;
+  color: var(--navy-700);
+}
+.hero-sub::before {
+  content: '';
+  display: block;
+  width: 62px; height: 3px; border-radius: 2px;
+  margin: 0 auto 22px;
+  background: linear-gradient(90deg, var(--gold-500), var(--gold-200));
+}
+
+/* --------------------------------------------------------------------------
    2. Home — Trust bar
    -------------------------------------------------------------------------- */
 .trust { padding-block: 34px; background: #fff; border-bottom: 1px solid var(--line-soft); }
@@ -362,7 +381,9 @@
 /* --------------------------------------------------------------------------
    8. Team page
    -------------------------------------------------------------------------- */
-.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+/* Two columns of horizontal profile cards — each carries a brief, core expertise
+   and key credentials, which is far more text than a portrait tile can hold. */
+.team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .member {
   background: #fff;
   border: 1px solid var(--line);
@@ -370,12 +391,13 @@
   overflow: hidden;
   transition: transform var(--t), box-shadow var(--t), border-color var(--t);
   height: 100%;
-  display: flex; flex-direction: column;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
 }
 .member:hover { transform: translateY(-6px); box-shadow: var(--sh-md); border-color: transparent; }
 .member__photo {
   position: relative;
-  aspect-ratio: 4 / 3.4;
+  min-height: 100%;
   background: linear-gradient(150deg, var(--navy-700), var(--navy-900));
   display: grid; place-items: center;
   overflow: hidden;
@@ -387,9 +409,9 @@
 }
 .member__photo::after {
   content: '';
-  position: absolute; inset-inline-start: 0; bottom: 0;
-  width: 100%; height: 3px;
-  background: linear-gradient(90deg, var(--gold-500), transparent);
+  position: absolute; inset-block: 0; inset-inline-end: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(180deg, var(--gold-500), transparent);
 }
 .member__body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
 .member__name { font-size: 1.08rem; margin-bottom: .2em; }
@@ -397,7 +419,23 @@
   font-family: var(--font-head); font-size: .8rem; font-weight: 500;
   color: var(--gold-600); letter-spacing: .04em; margin-bottom: 14px;
 }
-.member__bio { font-size: .87rem; margin-bottom: 18px; }
+.member__bio { font-size: .87rem; margin-bottom: 16px; }
+
+.member__facts { margin: 0 0 18px; font-size: .84rem; }
+.member__facts dt {
+  font-family: var(--font-head); font-size: .68rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--navy-700); margin-bottom: 3px;
+}
+[dir="rtl"] .member__facts dt { letter-spacing: .03em; }
+.member__facts dt::before {
+  content: ''; display: inline-block;
+  width: 14px; height: 2px; border-radius: 2px;
+  background: var(--gold-500);
+  margin-inline-end: 8px; vertical-align: middle;
+}
+.member__facts dd { margin: 0 0 12px; color: var(--body); }
+.member__facts dd:last-child { margin-bottom: 0; }
 .member__foot { margin-top: auto; display: flex; align-items: center; gap: 10px; }
 .member__social {
   width: 34px; height: 34px; border-radius: 50%;
@@ -481,6 +519,55 @@
 .step:hover .step__num { background: var(--gold-500); color: #fff; border-color: var(--gold-500); }
 .step h4 { font-size: 1rem; margin-bottom: .4em; }
 .step p { font-size: .86rem; margin: 0; }
+
+/* Technical sub-services — four specialist groups, each led by a named engineer */
+.techgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.techcard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold-500);
+  border-radius: var(--r-lg);
+  padding: 32px 30px 28px;
+  transition: transform var(--t), box-shadow var(--t);
+}
+.techcard:hover { transform: translateY(-5px); box-shadow: var(--sh-md); }
+.techcard__icon {
+  width: 54px; height: 54px; margin-bottom: 18px;
+  display: grid; place-items: center;
+  background: var(--navy-800); color: var(--gold-400);
+  border-radius: var(--r-md);
+}
+.techcard__icon .icon { width: 25px; height: 25px; }
+.techcard h3 { font-size: 1.1rem; margin-bottom: .3em; }
+.techcard__lead {
+  font-family: var(--font-head); font-size: .8rem; font-weight: 500;
+  color: var(--gold-600); margin-bottom: 18px;
+}
+.techcard ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+.techcard li {
+  position: relative; margin: 0;
+  padding-inline-start: 22px;
+  font-size: .89rem;
+}
+.techcard li::before {
+  content: '';
+  position: absolute; inset-inline-start: 0; top: .62em;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gold-500);
+}
+.techcard li strong { color: var(--ink); }
+
+/* Six-step methodology artwork */
+.methodology { margin: 0; }
+.methodology img {
+  width: 100%; height: auto;
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-md);
+}
+.methodology figcaption {
+  margin-top: 14px; text-align: center;
+  font-size: .86rem; color: var(--muted);
+}
 
 .svc-anchor-nav {
   display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
@@ -1003,10 +1090,11 @@
    14. Responsive
    -------------------------------------------------------------------------- */
 @media (max-width: 1180px) {
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1200px) {
+  .techgrid { grid-template-columns: 1fr; }
   .pband { grid-template-columns: 1fr; }
   .spotlight__inner { grid-template-columns: 1fr; gap: 34px; padding: 42px 34px; }
   .story { grid-template-columns: 1fr; gap: 52px; }
@@ -1061,13 +1149,14 @@
   .stat { flex: 1 1 auto; justify-content: center; }
   .client-logos { justify-content: center; gap: 30px; }
   .vm-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
   .form-card { padding: 30px 24px; }
   .case-detail__intro, .case-detail__body { padding-inline: 26px; }
 }
 
 @media (max-width: 620px) {
-  .team-grid { grid-template-columns: 1fr; }
+  .member { grid-template-columns: 1fr; }
+  .member__photo { aspect-ratio: 16 / 9; min-height: 0; }
+  .member__photo::after { inset-block: auto 0; inset-inline: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--gold-500), transparent); }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .check-list--2col { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }

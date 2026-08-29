@@ -546,7 +546,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
   /* Every page banner carries the same photograph as the home page hero.
      A page can use its own by setting the variable on the section, e.g.
      <section class="page-hero" style="--page-hero-img:url('assets/img/x.jpg')"> */
-  --page-hero-img: url('../img/hero-meeting.jpg');
+  --page-hero-img: url('../img/page-banner.jpg');
   --page-hero-pos: 60% 42%;
 }
 .page-hero::before {
