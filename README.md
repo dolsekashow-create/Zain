@@ -28,6 +28,18 @@ Drop it on any web host or GitHub Pages and it runs.
 Service anchors: `services.html#tender-qualification`, `#business-development`,
 `#training-coaching`, `#supply-chain`, `#technical-support`.
 
+## Guides
+
+Step-by-step instructions for the jobs that come up after launch. Written for
+whoever is doing the job, not for a developer.
+
+| Guide | Answers |
+|---|---|
+| [`docs/ADDING-ARTICLES.md`](docs/ADDING-ARTICLES.md) | How to publish a new Insights article or news item, in both languages. Start from [`_new-article-template.html`](_new-article-template.html). |
+| [`docs/EMAIL-SETUP.md`](docs/EMAIL-SETUP.md) | Creating `info@`, `ahmed@` and `support@`, and installing them on computers and phones. |
+| [`docs/SOCIAL-SETUP.md`](docs/SOCIAL-SETUP.md) | Creating the five company pages and linking them to the site in both directions. |
+| [`docs/BACKUP-AND-ACCESS.md`](docs/BACKUP-AND-ACCESS.md) | Backups, and where the domain and hosting credentials actually live. |
+
 ---
 
 ## Running it locally
@@ -229,17 +241,24 @@ The newsletter form in `insights.html` (`newsletterForm()`) works the same way.
 
 ## Before you go live
 
-- [ ] Confirm the contact details. `info@zainconsulting.com`, the Egypt numbers
+- [ ] Confirm the contact details. `info@zain-consulting.com`, the Egypt numbers
       (`+2 048 234 7812`, `+20 10 3590 4464`) and the UAE number (`+971 55 9634349`) appear in
       `components.js` (footer), `contact.html`, `privacy.html` and `terms.html`.
-- [ ] Create the LinkedIn, Instagram, Facebook and YouTube accounts on zainconsulting2002@gmail.com,
-      then replace the placeholder URLs in `components.js` (`SOCIALS`). Every team card already
-      points its LinkedIn icon at the company page and its mail icon at info@zainconsulting.com.
+- [ ] **Send the five real social URLs.** The accounts exist on zainconsulting2002@gmail.com;
+      the company pages still need creating. Until the real URLs replace the placeholders in
+      `components.js` (`SOCIALS`), `contact.html` and the `sameAs` list in `index.html`, the
+      icons point at addresses that may not exist. See `docs/SOCIAL-SETUP.md`.
+- [ ] **Create the three mailboxes** — `info@`, `ahmed@` and `support@zain-consulting.com` — with
+      the domain's email provider. See `docs/EMAIL-SETUP.md`. Only `info@` is published on the
+      site; say the word if `support@` should appear on the contact page too.
 - [ ] Replace the stories in `success-stories.html` with real engagements, and publish client names
       only with written permission.
 - [ ] Have `privacy.html` and `terms.html` reviewed by legal counsel — they are drafted templates,
       not legal advice.
-- [ ] Put the real domain into `sitemap.xml` and `robots.txt`.
+- [x] ~~Put the real domain into `sitemap.xml` and `robots.txt`.~~ Both now use
+      `https://www.zain-consulting.com`, as do the `og:`/canonical tags on all 12 pages.
+      If the live domain turns out to be anything else, it is a find-and-replace of that
+      one string.
 - [ ] Connect the contact form (see above).
 
 ---

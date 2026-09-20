@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  ARTICLE TEMPLATE — copy this file, do not edit it in place.
+  ============================================================================
+
+  To publish a new article:
+
+    1. Copy this file and rename it. Use lowercase words joined by hyphens,
+       always starting with "insights-":
+           insights-adnoc-registration-2026.html
+
+    2. Work through every block marked  <<< ... >>>  below and replace it.
+       Nothing else needs touching.
+
+    3. Put the article photograph in assets/img/ using the same naming style:
+           assets/img/blog-adnoc-registration.jpg
+       Around 1400px wide, saved as JPEG, under 200KB.
+
+    4. Add a card for the article on insights.html and (optionally) on
+       index.html. Copy an existing card and change the four lines marked in
+       docs/ADDING-ARTICLES.md.
+
+  Both languages live in this one file: every English block is marked
+  class="lang-en" and its Arabic twin class="lang-ar". The site shows whichever
+  matches the reader's chosen language, so you never touch the translation
+  dictionary for an article.
+
+  Full step-by-step instructions: docs/ADDING-ARTICLES.md
+  ============================================================================
+-->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <<< 1. TITLE — shown on the browser tab and in Google results.
+         Keep the " — Zain Consulting" ending. >>> -->
+<title>Article Title in English — Zain Consulting</title>
+
+<!-- <<< 2. SUMMARY — one or two sentences. This is the grey line Google shows
+         under the title, and the text that appears when the link is posted
+         to LinkedIn or WhatsApp. Aim for 140–160 characters. >>> -->
+<meta name="description" content="One or two sentences describing what the reader will learn from this article.">
+
+<meta name="theme-color" content="#0C2340">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<!-- Share cards. <<< 3. Replace FILENAME.html with this file's own name, and
+     the image path with this article's photograph, in all five places. >>> -->
+<link rel="canonical" href="https://www.zain-consulting.com/FILENAME.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Zain Consulting">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AE">
+<meta property="og:url" content="https://www.zain-consulting.com/FILENAME.html">
+<meta property="og:title" content="Article Title in English — Zain Consulting">
+<meta property="og:description" content="One or two sentences describing what the reader will learn from this article.">
+<meta property="og:image" content="https://www.zain-consulting.com/assets/img/blog-YOUR-IMAGE.jpg">
+<meta property="og:image:alt" content="Zain Consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Article Title in English — Zain Consulting">
+<meta name="twitter:description" content="One or two sentences describing what the reader will learn from this article.">
+<meta name="twitter:image" content="https://www.zain-consulting.com/assets/img/blog-YOUR-IMAGE.jpg">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/rtl.css">
+<script>(function(){try{if(localStorage.getItem('zc-lang')==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';}}catch(e){}})();</script>
+<script src="assets/js/i18n.dict.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</head>
+
+<body data-page="blog">
+<script src="assets/js/components.js"></script>
+
+<div data-component="header"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <ul class="breadcrumb">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><svg class="icon sep" aria-hidden="true"><use href="#i-chevron-right"></use></svg><a href="insights.html" data-i18n="nav.blog">Blog</a></li>
+        <!-- <<< 4. CATEGORY — keep ONE of these five lines and delete the other four.
+                 The key must match the category you use on the insights.html card. >>> -->
+        <li><svg class="icon sep" aria-hidden="true"><use href="#i-chevron-right"></use></svg><span data-i18n="blog.cat.tender">Tender Management</span></li>
+        <!-- <li>…<span data-i18n="blog.cat.bizdev">Business Development</span></li> -->
+        <!-- <li>…<span data-i18n="blog.cat.chem">Chemicals &amp; Petroleum</span></li> -->
+        <!-- <li>…<span data-i18n="blog.cat.energy">Renewable Energy</span></li> -->
+        <!-- <li>…<span data-i18n="blog.cat.success">Success Stories</span></li> -->
+      </ul>
+
+      <!-- <<< 5. HEADLINE in both languages. >>> -->
+      <h1>
+        <span class="lang-en">Article Title in English</span>
+        <span class="lang-ar">عنوان المقال بالعربية</span>
+      </h1>
+
+      <!-- <<< 6. AUTHOR, DATE and READING TIME.
+               Reading time ≈ number of words ÷ 200, rounded up. >>> -->
+      <div class="post-meta" style="color:rgba(255,255,255,.6)">
+        <span><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg>
+          <span class="lang-en">Author Name</span><span class="lang-ar">اسم الكاتب</span></span>
+        <span><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+          <span class="lang-en">1 January 2026</span><span class="lang-ar">١ يناير ٢٠٢٦</span></span>
+        <span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+          <span class="lang-en">6 min read</span><span class="lang-ar">٦ دقائق قراءة</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="article">
+
+        <!-- <<< 7. LEAD PHOTOGRAPH. The alt text describes the picture for
+                 search engines and for readers using a screen reader. >>> -->
+        <figure class="article__figure" data-reveal>
+          <img src="assets/img/blog-YOUR-IMAGE.jpg" alt="Plain description of what the photograph shows">
+          <figcaption>
+            <span class="lang-en">One line of caption under the photograph.</span>
+            <span class="lang-ar">سطر واحد كتعليق أسفل الصورة.</span>
+          </figcaption>
+        </figure>
+
+        <!-- ================= <<< 8. ENGLISH BODY >>> =====================
+             Available tags inside .prose:
+               <p class="lead">…</p>   opening paragraph, slightly larger
+               <p>…</p>                normal paragraph
+               <h2>…</h2>              section heading
+               <h3>…</h3>              sub-heading
+               <ul><li>…</li></ul>     bullet list
+               <ol><li>…</li></ol>     numbered list
+               <blockquote>…</blockquote>  pull quote
+               <strong>…</strong>      bold        <em>…</em>  italic
+             Nothing else is styled, so stick to this list.
+        ================================================================= -->
+        <div class="prose lang-en" data-reveal data-reveal-delay="80">
+          <p class="lead">Opening paragraph. State the problem the reader has and what this article will settle for them.</p>
+
+          <p>Ordinary paragraph of body text.</p>
+
+          <h2>First section heading</h2>
+          <p>Body text for the first section.</p>
+
+          <ul>
+            <li>A bullet point.</li>
+            <li>Another bullet point.</li>
+          </ul>
+
+          <h2>Second section heading</h2>
+          <p>Body text for the second section.</p>
+
+          <blockquote>A single sentence worth pulling out of the text.</blockquote>
+
+          <h2>Closing section</h2>
+          <p>Close with what the reader should do next, and how Zain Consulting helps with it.</p>
+        </div>
+
+        <!-- ================= <<< 9. ARABIC BODY >>> ======================
+             The same article in Arabic. Keep the structure identical so the
+             two versions stay in step. Do not add dir="rtl" — the page
+             already flips direction on its own.
+        ================================================================= -->
+        <div class="prose lang-ar" data-reveal data-reveal-delay="80">
+          <p class="lead">الفقرة الافتتاحية. اذكر المشكلة التي تواجه القارئ وما سيحسمه له هذا المقال.</p>
+
+          <p>فقرة عادية من نص المقال.</p>
+
+          <h2>العنوان الفرعي الأول</h2>
+          <p>نص القسم الأول.</p>
+
+          <ul>
+            <li>نقطة أولى.</li>
+            <li>نقطة ثانية.</li>
+          </ul>
+
+          <h2>العنوان الفرعي الثاني</h2>
+          <p>نص القسم الثاني.</p>
+
+          <blockquote>جملة واحدة تستحق أن تُبرز من داخل النص.</blockquote>
+
+          <h2>الخاتمة</h2>
+          <p>اختم بما ينبغي على القارئ فعله بعد ذلك، وكيف تساعده زين للاستشارات في ذلك.</p>
+        </div>
+
+        <!-- <<< 10. SHARE BUTTONS. Replace FILENAME.html with this file's name
+                 in every link below, and replace the title after "text=" and
+                 "subject=" with this article's headline. Spaces are written
+                 as %20 in a link. >>> -->
+        <div class="share-row" data-reveal>
+          <span data-i18n="post.share">Share this article</span>
+          <div class="socials">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.zain-consulting.com%2FFILENAME.html" target="_blank" rel="noopener" aria-label="Share on LinkedIn" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+            </a>
+            <a href="https://x.com/intent/tweet?url=https%3A%2F%2Fwww.zain-consulting.com%2FFILENAME.html&amp;text=Article%20Title%20in%20English" target="_blank" rel="noopener" aria-label="Share on X" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)">
+              <svg class="icon" aria-hidden="true"><use href="#i-x-social"></use></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.zain-consulting.com%2FFILENAME.html" target="_blank" rel="noopener" aria-label="Share on Facebook" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)">
+              <svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg>
+            </a>
+            <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.zain-consulting.com%2FFILENAME.html&amp;text=Article%20Title%20in%20English" target="_blank" rel="noopener" aria-label="Share on Telegram" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)">
+              <svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg>
+            </a>
+            <a href="https://wa.me/?text=Article%20Title%20in%20English%20https%3A%2F%2Fwww.zain-consulting.com%2FFILENAME.html" target="_blank" rel="noopener" aria-label="Share on WhatsApp" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+            </a>
+            <a href="mailto:?subject=Article%20Title%20in%20English&amp;body=https%3A%2F%2Fwww.zain-consulting.com%2FFILENAME.html" aria-label="Share by email" style="background:var(--bg-alt);color:var(--navy-700);border-color:var(--line)">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+            </a>
+          </div>
+          <a class="btn btn-outline btn-sm" href="insights.html" style="margin-inline-start:auto">
+            <span data-i18n="post.back">Back to all articles</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- <<< 11. RELATED ARTICLES — point these three cards at other articles.
+           Change the href, the image, the category tag and the headline in
+           each one. Delete a card if you have fewer than three. >>> -->
+  <section class="section section--alt section--tight">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-i18n="post.relatedEyebrow">Keep Reading</span>
+        <h2 data-i18n="post.relatedTitle">Related Articles</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <article class="card" data-reveal>
+          <div class="card__media">
+            <img src="assets/img/blog-supplier-registration.jpg" alt="Refinery at twilight" loading="lazy">
+            <span class="tag" data-i18n="blog.cat.bizdev">Business Development</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title"><a href="insights-post.html" data-i18n="post2.title">How to Register as a Supplier with Major Oil &amp; Gas Companies in the Middle East</a></h3>
+            <div class="card__foot">
+              <a class="link-arrow" href="insights-post.html"><span data-i18n="common.readMore">Read More</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-reveal-delay="120">
+          <div class="card__media">
+            <img src="assets/img/blog-chemical-future.jpg" alt="Laboratory technician testing chemical samples" loading="lazy">
+            <span class="tag" data-i18n="blog.cat.chem">Chemicals &amp; Petroleum</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title"><a href="insights-post.html" data-i18n="post3.title">The Future of the Chemicals &amp; Petroleum Sector in the Middle East</a></h3>
+            <div class="card__foot">
+              <a class="link-arrow" href="insights-post.html"><span data-i18n="common.readMore">Read More</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-reveal data-reveal-delay="240">
+          <div class="card__media">
+            <img src="assets/img/blog-tender-mistakes-v2.jpg" alt="Consultant signing a tender proposal" loading="lazy">
+            <span class="tag" data-i18n="blog.cat.tender">Tender Management</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title"><a href="insights-post.html" data-i18n="post1.title">5 Common Mistakes in Tender Submissions and How to Avoid Them</a></h3>
+            <div class="card__foot">
+              <a class="link-arrow" href="insights-post.html"><span data-i18n="common.readMore">Read More</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <!-- Spread / global reach motif — the bridge now lives in the footer -->
+    <svg class="cta-band__art" viewBox="0 0 420 200" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path d="M120 100C180 40 262 28 332 44" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C192 74 292 74 374 94" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C186 118 280 138 352 152" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C150 150 200 178 264 188" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M120 100C86 58 58 36 22 26" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="120" cy="100" r="21" stroke="currentColor" stroke-width="1.2" opacity=".65"/>
+      <circle cx="120" cy="100" r="36" stroke="currentColor" stroke-width="1" opacity=".4"/>
+      <circle cx="120" cy="100" r="7.5" fill="currentColor"/>
+      <circle cx="332" cy="44" r="4.5" fill="currentColor"/>
+      <circle cx="374" cy="94" r="4.5" fill="currentColor"/>
+      <circle cx="352" cy="152" r="4.5" fill="currentColor"/>
+      <circle cx="264" cy="188" r="4.5" fill="currentColor"/>
+      <circle cx="22" cy="26" r="4.5" fill="currentColor"/>
+    </svg>
+    <div class="container cta-band__inner">
+      <h2 data-i18n="cta.title">Ready to Unlock New Growth Opportunities?</h2>
+      <p data-i18n="cta.text">Let's discuss how Zain Consulting can help your business win major tenders and achieve sustainable growth.</p>
+      <div class="btn-group">
+        <a class="btn btn-gold" href="contact.html"><span data-i18n="cta.contactToday">Contact Us Today</span></a>
+        <a class="btn btn-ghost-light" href="contact.html#consultation">
+          <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+          <span data-i18n="cta.schedule">Schedule a Consultation</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+</body>
+</html>

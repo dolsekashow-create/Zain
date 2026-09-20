@@ -3,5 +3,7 @@ Allow: /
 Disallow: /privacy.html
 Disallow: /terms.html
 
-# Replace with your real domain before launch
-Sitemap: https://www.zainconsulting.com/sitemap.xml
+# The article template is a working file, not a page
+Disallow: /_new-article-template.html
+
+Sitemap: https://www.zain-consulting.com/sitemap.xml

@@ -63,7 +63,8 @@
     'facebook': '<path d="M14 9.4V7.9c0-.75.2-1.15 1.4-1.15h1.5V3.2h-2.4C11.2 3.2 10 4.7 10 7.2v2.2H8v3.4h2V21h4v-8.2h2.7l.35-3.4z" fill="currentColor" stroke="none"/>',
     'instagram': '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"/>',
     'x-social': '<path d="M3 3h4.6l4.8 6.5L18.1 3H21l-6.9 8L21.4 21h-4.6l-5.1-6.9L5.2 21H2.4l7.4-8.6z" fill="currentColor" stroke="none"/>',
-    'whatsapp': '<path d="M12 2.9a9 9 0 0 0-7.7 13.6L3 21.4l5.1-1.3A9 9 0 1 0 12 2.9zm5.2 12.6c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a12 12 0 0 1-4.4-3.1 8.7 8.7 0 0 1-1.8-3c-.2-.6 0-1.3.4-1.7l.5-.5c.2-.2.5-.2.7.1l1 1.6c.1.2.1.4 0 .6l-.4.6c-.2.2-.2.4-.1.6.4.8 1.5 2 2.6 2.5.2.1.4.1.6-.1l.6-.7c.2-.2.4-.2.6-.1l1.7.9c.3.1.4.4.3.6z" fill="currentColor" stroke="none"/>'
+    'whatsapp': '<path d="M12 2.9a9 9 0 0 0-7.7 13.6L3 21.4l5.1-1.3A9 9 0 1 0 12 2.9zm5.2 12.6c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a12 12 0 0 1-4.4-3.1 8.7 8.7 0 0 1-1.8-3c-.2-.6 0-1.3.4-1.7l.5-.5c.2-.2.5-.2.7.1l1 1.6c.1.2.1.4 0 .6l-.4.6c-.2.2-.2.4-.1.6.4.8 1.5 2 2.6 2.5.2.1.4.1.6-.1l.6-.7c.2-.2.4-.2.6-.1l1.7.9c.3.1.4.4.3.6z" fill="currentColor" stroke="none"/>',
+    'telegram': '<path d="M21.9 4.3 2.7 11.7c-.82.3-.8.86-.07 1.07l4.78 1.49 1.85 5.6c.2.6.4.81.8.81.3 0 .48-.13.68-.33l2.26-2.2 4.6 3.4c.83.46 1.4.23 1.6-.74l2.9-13.6c.26-1.15-.45-1.67-1.2-1.36z" fill="currentColor" stroke="none"/>'
   };
 
   function buildSprite() {
@@ -263,7 +264,8 @@
     ['https://www.linkedin.com/company/zain-consulting', 'linkedin', 'LinkedIn'],
     ['https://www.facebook.com/zainconsulting', 'facebook', 'Facebook'],
     ['https://www.instagram.com/zainconsulting', 'instagram', 'Instagram'],
-    ['https://x.com/zainconsulting', 'x-social', 'X']
+    ['https://x.com/zainconsulting', 'x-social', 'X'],
+    ['https://t.me/zainconsulting', 'telegram', 'Telegram']
   ];
 
   function footerLinks(items) {
@@ -305,7 +307,7 @@
             '<div class="footer-contact-col">' +
               '<h4 class="footer-title" data-i18n="footer.contactUs">Contact Us</h4>' +
               '<ul class="footer-contact">' +
-                '<li>' + icon('mail') + '<a href="mailto:info@zainconsulting.com">info@zainconsulting.com</a></li>' +
+                '<li>' + icon('mail') + '<a href="mailto:info@zain-consulting.com">info@zain-consulting.com</a></li>' +
                 '<li>' + icon('pin') +
                   '<span><strong data-i18n="contact.branch.egypt">Egypt</strong>' +
                   '<a class="ltr" href="tel:+20482347812">+2 048 234 7812</a><br>' +
