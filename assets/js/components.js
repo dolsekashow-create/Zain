@@ -262,7 +262,7 @@
 
   var SOCIALS = [
     ['https://www.linkedin.com/company/zain-consulting', 'linkedin', 'LinkedIn'],
-    ['https://www.facebook.com/zainconsulting', 'facebook', 'Facebook'],
+    ['https://www.facebook.com/profile.php?id=61594937429317', 'facebook', 'Facebook'],
     ['https://www.instagram.com/zainconsulting', 'instagram', 'Instagram'],
     ['https://x.com/zainconsulting', 'x-social', 'X'],
     ['https://t.me/zainconsulting', 'telegram', 'Telegram']
