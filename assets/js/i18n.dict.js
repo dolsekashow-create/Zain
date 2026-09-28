@@ -307,6 +307,11 @@ window.ZC_AR = {
   'blog.cat.chem': 'المواد الكيميائية والبترول',
   'blog.cat.energy': 'الطاقة المتجددة',
   'blog.cat.success': 'قصص النجاح',
+  'blog.cat.technical': 'رؤى فنية',
+  'title.art.nocRegistration': 'التسجيل لدى كبرى مشغّلي حقول النفط وشركات النفط الوطنية — Zain Consulting',
+  'title.art.caliperPigging': 'الكشف بأداة الكاليبر — Zain Consulting',
+  'title.art.partnerCredibility': 'التحقق من مصداقية الشريك المحتمل — Zain Consulting',
+  'title.art.hiddenMistakes': 'أخطاء خفية تُفقدك المناقصة — Zain Consulting',
   'blog.empty': 'لا توجد مقالات في هذا التصنيف بعد — تابعنا قريبًا.',
 
   'post1.title': '٥ أخطاء شائعة في تقديم المناقصات وكيف تتجنبها',

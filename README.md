@@ -20,7 +20,8 @@ Drop it on any web host or GitHub Pages and it runs.
 | `services.html` | Services | 4 practice areas, the technical sub-services team, and the 5-step How We Work visual |
 | `success-stories.html` | Success Stories | One detailed story + three summary cards |
 | `insights.html` | Insights | Featured post, category filter, 6 posts, newsletter block |
-| `insights-post.html` | Article | Full article template, written in both languages |
+| `insights-post.html` | Article | Launch sample article, written in both languages |
+| `insights-*.html` | Articles | The team's articles — NOC registration (Ashraf Pullissery), caliper pigging (Muthana Zaibag), partner due diligence and hidden tender mistakes (Ahmed Zain) |
 | `contact.html` | Contact Us | Form with validation, Egypt + UAE branches, hours, FAQ accordion |
 | `privacy.html` / `terms.html` | Legal | Bilingual policy templates |
 | `404.html` | Not found | Used automatically by GitHub Pages |
