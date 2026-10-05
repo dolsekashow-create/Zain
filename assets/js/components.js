@@ -265,7 +265,7 @@
     ['https://www.facebook.com/profile.php?id=61594937429317', 'facebook', 'Facebook'],
     ['https://www.instagram.com/zainconsulting', 'instagram', 'Instagram'],
     ['https://x.com/zainconsulting', 'x-social', 'X'],
-    ['https://t.me/zainconsulting', 'telegram', 'Telegram']
+    ['https://t.me/zainconsultingchannel', 'telegram', 'Telegram']
   ];
 
   function footerLinks(items) {
@@ -307,7 +307,10 @@
             '<div class="footer-contact-col">' +
               '<h4 class="footer-title" data-i18n="footer.contactUs">Contact Us</h4>' +
               '<ul class="footer-contact">' +
-                '<li>' + icon('mail') + '<a href="mailto:info@zain-consulting.com">info@zain-consulting.com</a></li>' +
+                '<li>' + icon('mail') +
+                  '<span><a href="mailto:info@zain-consulting.com">info@zain-consulting.com</a><br>' +
+                  '<a href="mailto:support@zain-consulting.com">support@zain-consulting.com</a><br>' +
+                  '<a href="mailto:ahmed@zain-consulting.com">ahmed@zain-consulting.com</a></span></li>' +
                 '<li>' + icon('pin') +
                   '<span><strong data-i18n="contact.branch.egypt">Egypt</strong>' +
                   '<a class="ltr" href="tel:+20482347812">+2 048 234 7812</a><br>' +
